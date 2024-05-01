@@ -3,7 +3,7 @@ import Buttons from "@/components/commonComponents/Buttons";
 import CategoryHeader from "@/components/commonComponents/CategoryHeader";
 import CustomerReviewSummary from "@/components/commonComponents/CustomerReviewSummary";
 import ProductTags from "@/components/commonComponents/ProductTags";
-import SingleReview from "@/components/commonComponents/SingleReview";
+import SingleReview from "@/components/commonComponents/ClientReview";
 
 export default function Home() {
   return (

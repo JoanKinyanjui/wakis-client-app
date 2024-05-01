@@ -6,13 +6,16 @@ import Image from 'next/image'
 function AboutStoreSummary({name,rating,followers,items,logo} :AboutStoreSummaryProps) {
   return (
     <div className='grid gap-3.5 md:gap-7 w-full sm:w-[80%] md:w-3/4 lg:w-1/2' >
+      <div className='subTitle'>
+        About Store
+      </div>
        <div className='flex gap-2.5 md:gap-5'>
         <div className='w-[70px] h-[70px] rounded-[10px] border shadow-md'>
         {logo ? <Image src='/'  alt='svg' width={30} height={30} className='shrink-0 w-full'/> : null }
         </div>
         <div className='grid gap-1.5 md:gap-3'>
-            <p className='text-lg md:text-xl font-[600]'>{name}</p>
-            <div className='text-grey_103 font-normal text-sm md:text-md flex gap-2.5 md:gap-5 items-center'>
+            <p className='mediumTitle'>{name}</p>
+            <div className='text-grey_103 normalText flex gap-2.5 md:gap-5 items-center'>
         <p>{rating} Rating</p>
         <p>{followers} Followers</p>
         <p>{items} Items</p>

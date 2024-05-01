@@ -13,6 +13,7 @@ const config: Config = {
       xs: '10px',
       sm: '12px',
       md: '14px',
+      mmd:'16px',
       lg: '18px',
       xl: '20px',
       xxl:'24px'
