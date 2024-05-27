@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ButtonProps = {
     buttonText?: string;
     className?:string;
@@ -22,4 +24,12 @@ export type AboutStoreSummaryProps ={
     followers:string;
     items:string;
     logo?:string;
+}
+export type CardWrapperProps ={
+    children: ReactNode;
+}
+export type NavItemsProps ={
+    id: number;
+    title:string;
+    link:string;
 }

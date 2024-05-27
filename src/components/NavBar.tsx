@@ -1,10 +1,59 @@
+import Image from 'next/image'
 import React from 'react'
+import CardWrapper from './commonComponents/CardWrapper'
 
 function NavBar() {
   return (
-    <div>
-      
+    <CardWrapper>
+
+    <div className='grid md:hidden gap-2.5 my-2.5'>
+  <div className='flex justify-between items-center'>
+     <div className='flex items-center gap-2.5'>
+     <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18}/>
+      <div className='text-purple_02  logoSize'>IN<span className='text-purple_01'>STY</span>LE</div>
+     </div>
+
+     <div className='flex items-center gap-5 '> 
+      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/acc.png' alt='' width={16} height={16}/>
+      </div>
+     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/fav.png' alt='' width={16} height={16}/>
+      </div>
+     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/cart.png' alt='' width={16} height={16}/>
+      </div>
+     </div>
+  </div>
+  <div className='bg-grey_101 h-[38px] px-2.5 flex gap-5 items-center rounded-[40px]'>
+      <Image  src='/assets/icons/search.png' alt='' width={16} height={16}/>
+        <input type='text' placeholder='Search' className='bg-grey_101 focus:outline-none focus:border-none'/>
+      </div>
     </div>
+
+    <div className='hidden md:flex items-center justify-between my-5'>
+     <div>
+      <div className='text-purple_02  logoSize'>IN<span className='text-purple_01'>STY</span>LE</div>
+     </div>
+
+     <div className='flex items-center gap-5 '> 
+      <div className='bg-grey_101 h-[42px] px-2.5 flex gap-5 items-center rounded-[40px]'>
+      <Image  src='/assets/icons/search.png' alt='' width={18} height={18}/>
+        <input type='text' placeholder='Search' className='bg-grey_101 focus:outline-none focus:border-none'/>
+      </div>
+      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/acc.png' alt='' width={18} height={18}/>
+      </div>
+     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/fav.png' alt='' width={18} height={18}/>
+      </div>
+     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
+        <Image  src='/assets/icons/cart.png' alt='' width={18} height={18}/>
+      </div>
+     </div>
+    </div>
+
+    </CardWrapper>
   )
 }
 
