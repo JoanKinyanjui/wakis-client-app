@@ -1,16 +1,5 @@
-type imageProps = {
-    id:number;
-    url:string;
-}
-type ReviewsProps ={
-    id:number;
-    name:string;
-    content:string;
-    date:string;
-    rating:number;
-    likes:number;
-    images: imageProps[];
-}
+import { ReviewsProps } from "./type";
+
 export const Reviews:ReviewsProps[] =[
     {
         id:1,

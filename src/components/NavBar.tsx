@@ -1,6 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
-import CardWrapper from './commonComponents/CardWrapper'
+import Image from 'next/image';
+import React from 'react';
+import CardWrapper from './commonComponents/CardWrapper';
+import Icon from './commonComponents/Icon';
 
 function NavBar() {
   return (
@@ -15,13 +16,13 @@ function NavBar() {
 
      <div className='flex items-center gap-5 '> 
       <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/acc.png' alt='' width={16} height={16}/>
+      <Icon icon='mdi:account' className='icon'  />
       </div>
      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/fav.png' alt='' width={16} height={16}/>
+        <Icon icon='mdi:favourite' className='icon'  />
       </div>
      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/cart.png' alt='' width={16} height={16}/>
+        <Icon icon='mdi:cart' className='icon'  />
       </div>
      </div>
   </div>
@@ -42,13 +43,13 @@ function NavBar() {
         <input type='text' placeholder='Search' className='bg-grey_101 focus:outline-none focus:border-none'/>
       </div>
       <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/acc.png' alt='' width={18} height={18}/>
+      <Icon icon='mdi:account' className='icon'  />
       </div>
      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/fav.png' alt='' width={18} height={18}/>
+     <Icon icon='mdi:favourite' className='icon'  />
       </div>
      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
-        <Image  src='/assets/icons/cart.png' alt='' width={18} height={18}/>
+     <Icon icon='mdi:cart' className='icon'  />
       </div>
      </div>
     </div>

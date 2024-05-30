@@ -6,12 +6,12 @@ import ProductTags from "@/components/commonComponents/ProductTags";
 import SingleReview from "@/components/commonComponents/ClientReview";
 import NavBar from "@/components/NavBar";
 import TopBar from "@/components/TopBar";
+import LandingPage from "@/components/LandingPage/LandingPage";
 
 export default function Home() {
   return (
 <div>
-  <NavBar />
-  <TopBar />
+  <LandingPage />
  {/* <Buttons buttonText="SHOP NOW" rounded={false} className="w-[200px] md:w-[150px] bg-purple_01"  />
  <CategoryHeader headingLeft="FOR YOU" icon='/assets/icons/yeey.svg' rightIcon={true} headingRight="SEE ALL" />
  <ProductTags tagName='Kendy Thrift Store' tagIcon='/assets/icons/yeey.svg' />

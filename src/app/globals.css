@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.icon{
+  color: #9A9A9B;
+  width: 16px;
+  height: 16px;
+}
 
 .logoSize{
-  font-weight:600;
+  font-weight:700;
   font-size:28px;
 }
 .mainTitle{
@@ -27,9 +32,14 @@
   font-weight:400;
   font-size:12px;
 }
+.smallTextBold{
+  font-weight:500;
+  font-size:10px;
+}
 @media only screen and (max-width: 768px) {
   .logoSize{
     font-size:24px;
+    font-weight:600;
   }
   .mainTitle {
     font-size: 18px;
@@ -46,5 +56,9 @@
   .smallText{
     font-weight:400;
     font-size:10px;
+  }
+  .smallTextBold{
+    font-weight:500;
+    font-size:8px;
   }
 }
