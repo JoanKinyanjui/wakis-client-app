@@ -11,7 +11,7 @@ function QuickLinks() {
    <div className='hidden sm:grid  xxs:grid-cols-6  gap-3 md:gap-4 place-items-center'>
     {quickLinks.map((item,i)=>(
         <div key={item.id} className=''>
-             <IndividualQuickLink />
+             <IndividualQuickLink item={item} />
         </div>
     ))}
     </div>
@@ -19,14 +19,14 @@ function QuickLinks() {
   <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto'>
     {quickLinks?.slice(0,halfwayIndex).map((item,i)=>(
         <div key={item.id} className='sm:justify-between flex w-full'>
-             <IndividualQuickLink />
+             <IndividualQuickLink item={item}/>
         </div>
     ))}
     </div>
     <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto'>
     {quickLinks?.slice(halfwayIndex).map((item,i)=>(
         <div key={item.id} className='sm:justify-between flex'>
-             <IndividualQuickLink />
+             <IndividualQuickLink item={item}/>
         </div>
     ))}
     </div>

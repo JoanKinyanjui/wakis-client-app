@@ -16,4 +16,5 @@ export type QuickLinks ={
     title:string;
     link:string;
     alt: string;
+    image:string
 }

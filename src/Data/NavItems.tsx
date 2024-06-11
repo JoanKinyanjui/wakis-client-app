@@ -28,28 +28,28 @@ export const NavItems:NavItemsProps[] =[
     },
     {
         id:6,
-        title:'Underwaer & Sleepwear',
+        title:'Home',
         link:'#'
     },
-    {
-        id:7,
-        title:'Baby & Martenity',
-        link:'#'
-    },
-    {
-        id:8,
-        title:'Sports & Outdoors',
-        link:'#'
-    },
-    {
-        id:9,
-        title:'Bags & Luggage',
-        link:'#'
-    },
-    {
-        id:10,
-        title:'Shoes',
-        link:'#'
-    },
+    // {
+    //     id:7,
+    //     title:'Baby & Martenity',
+    //     link:'#'
+    // },
+    // {
+    //     id:8,
+    //     title:'Sports & Outdoors',
+    //     link:'#'
+    // },
+    // {
+    //     id:9,
+    //     title:'Ankara',
+    //     link:'#'
+    // },
+    // {
+    //     id:10,
+    //     title:'Bags & Luggage',
+    //     link:'#'
+    // },
     
 ]

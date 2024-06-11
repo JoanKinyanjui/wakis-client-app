@@ -4,73 +4,85 @@ export const quickLinks:QuickLinks[] = [
     {
         id:1,
         title:'Women',
-        link:'#',
-        alt:'women'
+        link:'/women',
+        alt:'women',
+        image:'https://i.pinimg.com/474x/86/e4/ce/86e4cedc4e78029fd0b494ddb336e7ea.jpg',
     },
     {
         id:2,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Men',
+        link:'/men',
+        alt:'men',
+        image:'https://i.pinimg.com/474x/4a/2a/a6/4a2aa6db1237f54340badbf62bdc3859.jpg',
     },
     {
         id:3,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Kids',
+        link:'/kids',
+        alt:'kids',
+        image:'https://i.pinimg.com/474x/9f/21/29/9f2129baa17f88b6fc243d102e3de4db.jpg',
     },
     {
         id:4,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Shoes',
+        link:'/shoes',
+        alt:'shoes',
+        image:'https://i.pinimg.com/474x/12/44/b1/1244b19ead84adc91caaffff4beb253a.jpg',
     },
     {
         id:5,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Bags & Luggage',
+        link:'/bags&Luggage',
+        alt:'bags and luggage',
+        image:'https://i.pinimg.com/474x/9e/cc/99/9ecc99fdf8d82145d73aac7ba642550c.jpg',
     },
     {
         id:6,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Sports and OutDoors',
+        link:'/sport&Outdoors',
+        alt:'sports and outdoors',
+        image:'https://i.pinimg.com/564x/4f/f0/56/4ff056a31fddf28b710fef000f0f52c1.jpg',
     },
     {
         id:7,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'UnderWear & SleepWear',
+        link:'/underwear&sleepwear',
+        alt:'UnderWear & SleepWear',
+        image:'https://i.pinimg.com/474x/2e/c5/ca/2ec5ca3f87492d2c1a57f01fe510c28f.jpg',
     },
     {
         id:8,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Ankara',
+        link:'/ankara',
+        alt:'ankara',
+        image:'https://i.pinimg.com/474x/fc/c0/d5/fcc0d51000b5c3761e1065369af20d4f.jpg',
     },
     {
         id:9,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Accessories',
+        link:'/accessories',
+        alt:'accessories',
+        image:'https://i.pinimg.com/564x/f5/c8/73/f5c8732820fdffc0022a0cd43aaa0393.jpg',
     },
     {
         id:10,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Beauty',
+        link:'/beauty',
+        alt:'beauty',
+        image:'https://i.pinimg.com/474x/9f/1d/a4/9f1da4e5426c7d353352748da9b6667b.jpg',
     },
     {
         id:11,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Baby & Maternity',
+        link:'/baby&maternity',
+        alt:'baby and maternity',
+        image:'https://i.pinimg.com/474x/73/30/1f/73301f4616a799e8e534ed347d7d2500.jpg',
     },
     {
         id:12,
-        title:'Women',
-        link:'#',
-        alt:'women'
+        title:'Home',
+        link:'/home',
+        alt:'women',
+        image:'https://i.pinimg.com/474x/d6/87/c7/d687c718f92f616e6c324b4a7516cd52.jpg',
     },
 ]
