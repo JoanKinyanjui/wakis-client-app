@@ -1,12 +1,13 @@
 import React from 'react'
 import { CategoryHeaderProps } from './types'
 import Image from 'next/image'
+import Icon from './Icon'
 
 function CategoryHeader({icon,headingLeft,rightIcon,headingRight}:CategoryHeaderProps) {
   return (
     <div className='flex justify-between'>
         <div className='flex gap-2 md:gap-3.5 items-center'>
-        <Image src={icon}  alt='svg' width={30} height={30} className='shrink-0 w-[25] md:w-[30] h-[25] md:h-[30]'/>
+        <Icon icon={icon}  className='shrink-0 w-[20px] md:w-[25px] h-[20px] md:h-[25px]' />
         <h1 className='font-[700] text-lg md:text-xl'>{headingLeft}</h1>
         </div>
 

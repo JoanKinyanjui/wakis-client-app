@@ -1,12 +1,14 @@
 import React from 'react'
 import QuickLinks from './QuickLinks/QuickLinks'
-import HerSection from '../HerSection'
+import HerSection from '../HeroSection'
+import Categories from './Categories/Categories'
 
 function LandingPage() {
   return (
     <div>
       <HerSection />
       <QuickLinks />
+      <Categories />
     </div>
   )
 }

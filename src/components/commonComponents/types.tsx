@@ -27,6 +27,7 @@ export type AboutStoreSummaryProps ={
 }
 export type CardWrapperProps ={
     children: ReactNode;
+    customClass?:string;
 }
 export type NavItemsProps ={
     id: number;
