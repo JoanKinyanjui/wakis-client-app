@@ -34,3 +34,15 @@ export type NavItemsProps ={
     title:string;
     link:string;
 }
+export type ProductImageProps = {
+    discount? :boolean;
+    title?:string;
+    imageUrl:string;
+    price?:string;
+    beforePrice?:string;
+    rating?:number;
+    itemsSold?:number;
+    category?:string[];
+    officialStore?:boolean;
+    storeName?: string;
+}

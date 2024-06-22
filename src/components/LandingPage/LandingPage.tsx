@@ -5,7 +5,7 @@ import Categories from './Categories/Categories'
 
 function LandingPage() {
   return (
-    <div>
+    <div className=''>
       <HerSection />
       <QuickLinks />
       <Categories />

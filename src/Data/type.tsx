@@ -18,3 +18,14 @@ export type QuickLinks ={
     alt: string;
     image:string
 }
+export type ProductsProps = {
+    id:number;
+    title?:string;
+    price:string;
+    beforePrice:string;
+    rating?:number;
+    itemsSold?:number;
+    desscription:string,
+    imageUrl:string;
+    category?:string[],
+}

@@ -8,11 +8,11 @@ import OfficialStores from './OfficialStores'
 
 function Categories() {
   return (
-    <CardWrapper customClass='my-5 grid gap-2.5 md:gap-5'>
+    <CardWrapper customClass='my-5 flex flex-col gap-5'>    
       <ForYou />
-      <FlashSale />
-      <WhatsTrending />
-      <InYourLocation />
+      {/* <FlashSale /> */}
+      {/* <WhatsTrending /> */}
+      {/* <InYourLocation /> */}
       <OfficialStores />
     </CardWrapper>
   )
