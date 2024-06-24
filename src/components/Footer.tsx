@@ -64,11 +64,11 @@ function Footer() {
        </div>
        <div>
        <h4 className='mediumTitle text-black_101'>Payment Methods</h4>
-        <div className='normalText text-start text-grey_104  flex gap-5 items-center'>
-         <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[5px] ' alt='mpesa'/>
-         <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-h-[15px] ' alt='swypt'/>
+        <div className='normalText text-start text-grey_104  flex gap-5 items-center my-2'>
+         <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='mpesa'/>
+         <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='swypt'/>
          <Icon icon='logos:visaelectron' className='w-auto '/>
-         <Icon icon='logos:mastercard' className='w-auto'/>
+         <Icon icon='logos:mastercard' className='w-auto min-h-[20px]'/>
         </div>
        </div>
       </div>
