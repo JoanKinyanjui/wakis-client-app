@@ -7,7 +7,7 @@ import TopBar from "@/components/TopBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Instyle",
+  title: "WAKI",
   description: "Online Fashion Store",
 };
 

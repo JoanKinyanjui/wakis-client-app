@@ -5,9 +5,10 @@ import { ProductImageProps } from './types'
 
 function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUrl,officialStore,storeName}:ProductImageProps) {
   return (
-    <div className=' px-1 flex flex-col gap-1'>
-      <div className={`${price ? 'h-[160px] md:h-[200px] xl:h-[220px] w-full rounded-[4px] overflow-hidden relative': 'h-[180px] md:h-[250px] xl:h-[300px] w-full rounded-[4px] overflow-hidden relative'}`}>
-        <Image src={imageUrl} width={100} height={100} className='w-full h-full' alt='product' />
+    <div className=' px-1 grid ap-1 w-full'>
+      <div className={`${price ? 'h-[160px] md:h-[200px] xl:h-[220px] ': 'h-[180px] md:h-[250px] xl:h-[340px] '} w-full rounded-[4px] overflow-hidden relative
+w-full rounded-[4px] overflow-hidden relative`}>
+        <Image src={imageUrl} className='w-full h-full' layout='fill' alt='product' />
        {discount && (
          <div className='absolute top-0 left-0 flex items-center rounded-[2px] bg-purple_01 py-1 md:py-2 px-1 md:px-2'>
          <Icon icon='carbon:flash-filled' className='w-[10px] md:w-[16px]  h-[10px] md:h-[15px]' />

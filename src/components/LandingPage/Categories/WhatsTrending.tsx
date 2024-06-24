@@ -7,9 +7,9 @@ function WhatsTrending() {
   return (
     <div>
       <CategoryHeader icon='streamline:trending-content-solid' headingLeft='WHAT&apos;s TRENDING' rightIcon={true} headingRight='SEE ALL' />
-      <div className='w-full flex !overflow-x-auto space-x-2'>
+      <div className='w-full flex overflow-x-auto space-x-2 no-scrollbar'>
       {Products.slice(0,7).map((item,index)=>(
-        <div className='max-w-[160px] xxs:w-[200px] md:w-[30%] lg:w-1/5 xl:w-1/6'>
+        <div className='max-w-[160px] xxs:w-[200px] md:w-[30%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>
         <ProductImage price={item.price} beforePrice={item.beforePrice} imageUrl={item.imageUrl}  />
         </div>
       ))}

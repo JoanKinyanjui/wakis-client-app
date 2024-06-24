@@ -10,9 +10,9 @@ function Categories() {
   return (
     <CardWrapper customClass='my-5 flex flex-col gap-5'>    
       <ForYou />
-      {/* <FlashSale /> */}
-      {/* <WhatsTrending /> */}
-      {/* <InYourLocation /> */}
+      <FlashSale />
+      <WhatsTrending />
+      <InYourLocation />
       <OfficialStores />
     </CardWrapper>
   )

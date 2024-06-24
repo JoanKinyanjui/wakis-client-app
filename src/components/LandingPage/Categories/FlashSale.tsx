@@ -5,11 +5,11 @@ import React from 'react'
 
 function FlashSale() {
   return (
-    <div>
+    <div className='w-full'>
          <CategoryHeader icon='typcn:flash' headingLeft='FLASH SALE' rightIcon={true} headingRight='GRAB NOW' />
-      <div className='w-full flex !overflow-x-auto space-x-2'>
+      <div className='w-full flex overflow-x-auto space-x-2 no-scrollbar '>
       {Products.slice(0,6).map((item,index)=>(
-        <div className='max-w-[160px] xxs:w-[200px] md:w-[30%] lg:w-1/5 xl:w-1/6'>
+        <div className='max-w-[160px] xxs:w-[200px] md:w-[30%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>
         <ProductImage price={item.price} beforePrice={item.beforePrice} imageUrl={item.imageUrl}  />
         </div>
       ))}
