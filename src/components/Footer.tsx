@@ -65,10 +65,10 @@ function Footer() {
        <div>
        <h4 className='mediumTitle text-black_101'>Payment Methods</h4>
         <div className='normalText text-start text-grey_104  flex gap-5 items-center'>
-         <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto h-[24px] md:h-[36px]' alt='mpesa'/>
-         <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-w-[50px] h-[24px] md:h-[36px] ' alt='swypt'/>
-         <Icon icon='logos:visaelectron' className='w-auto h-[24px] md:h-[36px]'/>
-         <Icon icon='logos:mastercard' className='md:w-auto min-w-[36px] h-[24px] md:h-[36px]'/>
+         <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[5px] ' alt='mpesa'/>
+         <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-h-[15px] ' alt='swypt'/>
+         <Icon icon='logos:visaelectron' className='w-auto '/>
+         <Icon icon='logos:mastercard' className='w-auto'/>
         </div>
        </div>
       </div>
