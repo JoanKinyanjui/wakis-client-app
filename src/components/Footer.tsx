@@ -67,7 +67,7 @@ function Footer() {
         <div className='normalText text-start text-grey_104  flex gap-5 items-center my-2'>
          <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='mpesa'/>
          <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='swypt'/>
-         <Icon icon='logos:visaelectron' className='w-auto '/>
+         <Icon icon='logos:visaelectron' className='w-auto min-h-[20px]'/>
          <Icon icon='logos:mastercard' className='w-auto min-h-[20px]'/>
         </div>
        </div>
