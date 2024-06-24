@@ -3,9 +3,27 @@ import React, { useState } from 'react'
 import Icon from '../commonComponents/Icon'
 import Image from 'next/image'
 import Buttons from '../commonComponents/Buttons'
+import ProductSpecifications from './ProductSpecifications'
 
 function ProductCard() {
   const [favourite,setFavourite] = useState(false);
+  const addToFavourite = () =>{
+  setFavourite(!favourite)
+  }
+
+  const colorOptions = [
+    { name: 'Red', colorCode: 'red' },
+    { name: 'Green', colorCode: 'green' },
+    { name: 'Blue', colorCode: 'blue' },
+    { name: 'Yellow', colorCode: 'yellow' },
+  ];
+
+  const sizeOptions = [
+    { name: 'S' },
+    { name: 'M' },
+    { name: 'L' },
+    { name: 'XL' },
+  ];
 
 
   return (
@@ -20,7 +38,7 @@ function ProductCard() {
       </div>
       
       {/* Second row */}
-      <div className='flex gap-5'>
+<div className='flex gap-5'>
 <div className='grid gap-2.5'>
 <Image src='https://i.pinimg.com/474x/45/d0/ed/45d0edf2e824c3cf512c8acbee2abf80.jpg'  alt='' width={200} height={200} className='w-[100px] h-[110px] md:w-[120px]  md:h-[140px]  rounded-[4px]'/>
 <div className='flex justify-between items-center'>
@@ -30,21 +48,22 @@ function ProductCard() {
 </div>
   </div>
 
-  <div className='grid gap-2.5 md:gap-5 h-[110px] md:h-[140px] place-content-between '>
+  <div className='grid gap-2.5 h-[110px] md:h-[140px] place-content-between '>
     <p className='normalXText'>Beautiful Maxi Flower Dress</p>
     <div>
-    specs
-  </div>
+      <ProductSpecifications colors={colorOptions} sizes={sizeOptions}/>
+    </div>
     <div className='normalXText flex gap-5 md:gap-10'>
       <p className='text-black_101'>Ksh 2,456</p>
       <p className='text-grey_103 line-through'>Ksh 3,499</p>
     </div>
     <div className='absolute bottom-0 right-0 flex gap-5'>
-    <Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'} className='w-[24px] h-[24px] md:w-[36px] md:h-[36px] !text-black_101'/>
+    <Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'} className='w-[24px] h-[24px] md:w-[36px] md:h-[36px] !text-black_101' onClick={addToFavourite} />
     <Icon icon='ic:outline-delete' className='w-[24px] h-[24px] md:w-[36px] md:h-[36px]'/>
     </div>
   </div>
-      </div>
+  </div>
+  
     </div>
   )
 }
