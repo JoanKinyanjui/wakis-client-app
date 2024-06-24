@@ -6,7 +6,7 @@ import Buttons from '../commonComponents/Buttons'
 function Cart() {
   return (
     <div>
-    <CardWrapper customClass='w-full grid md:flex gap-5 mt-5'>
+    <CardWrapper customClass='w-full grid md:flex gap-5 mt-2.5 md:mt-5'>
       <div className='w-full md:w-[65%] px-5 py-5 bg-grey_101/20 shadow-md'>
       <ProductCard />
       </div>
@@ -20,7 +20,7 @@ function Cart() {
         <p>Ksh 0</p>
       </div>
       <div>
-        <Buttons className='bg-black_101 text-white_101' buttonText={`CHECKOUT ( KSH 0 )`}/>
+        <Buttons className='bg-black_101 text-white_101 py-3' buttonText={`CHECKOUT ( KSH 0 )`}/>
       </div>
       </div>
     </CardWrapper>
