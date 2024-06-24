@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  backgroundColor: white;
+}
 .icon{
   color: #9A9A9B;
   width: 16px;
@@ -23,6 +26,10 @@
 .mediumTitle{
   font-weight:600;
   font-size:18px;
+}
+.normalXText{
+  font-weight:500;
+  font-size:16px;
 }
 .normalText{
   font-weight:400;
@@ -50,6 +57,10 @@
    }
    .mediumTitle{
     font-size:16px;
+  }
+  .normalXText{
+    font-weight:500;
+    font-size:14px;
   }
    .normalText{
     font-size:12px;

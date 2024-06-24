@@ -1,9 +1,15 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
 import CardWrapper from './commonComponents/CardWrapper';
 import Icon from './commonComponents/Icon';
+import { useRouter } from 'next/navigation';
 
 function NavBar() {
+  const router = useRouter();
+  const moveToCart = () => {
+    router.push('/cart')
+  }
   return (
     <CardWrapper>
 
@@ -21,7 +27,7 @@ function NavBar() {
      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
         <Icon icon='mdi:favourite' className='icon'  />
       </div>
-     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center'>
+     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveToCart}>
         <Icon icon='mdi:cart' className='icon'  />
       </div>
      </div>
@@ -48,7 +54,7 @@ function NavBar() {
      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
      <Icon icon='mdi:favourite' className='icon'  />
       </div>
-     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center'>
+     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveToCart}>
      <Icon icon='mdi:cart' className='icon'  />
       </div>
      </div>
