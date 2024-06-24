@@ -5,11 +5,11 @@ import React from 'react'
 
 function InYourLocation() {
   return (
-    <div>
+    <div className='w-full'>
         <CategoryHeader icon='carbon:location-filled' headingLeft='IN YOUR LOCATION' rightIcon={true} headingRight='SEE ALL' />
-        <div className='w-full flex !overflow-x-auto space-x-2'>
+        <div className='w-full flex overflow-x-auto space-x-2 no-scrollbar'>
       {Products.slice(0,6).map((item,index)=>(
-        <div className='max-w-[160px] xxs:w-[200px] md:w-[30%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>
+        <div className='w-[100px] xxs:w-[120px] md:w-[25%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>
         <ProductImage price={item.price} beforePrice={item.beforePrice} imageUrl={item.imageUrl}  />
         </div>
       ))}

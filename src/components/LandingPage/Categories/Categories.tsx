@@ -5,6 +5,7 @@ import FlashSale from './FlashSale'
 import WhatsTrending from './WhatsTrending'
 import InYourLocation from './InYourLocation'
 import OfficialStores from './OfficialStores'
+import WholeSale from './WholeSale'
 
 function Categories() {
   return (
@@ -13,6 +14,7 @@ function Categories() {
       <FlashSale />
       <WhatsTrending />
       <InYourLocation />
+      <WholeSale />
       <OfficialStores />
     </CardWrapper>
   )

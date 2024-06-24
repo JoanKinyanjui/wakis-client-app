@@ -2,6 +2,8 @@ import React from 'react'
 import QuickLinks from './QuickLinks/QuickLinks'
 import HerSection from '../HeroSection'
 import Categories from './Categories/Categories'
+import BottomBar from '../BottomBar'
+import Footer from '../Footer'
 
 function LandingPage() {
   return (
@@ -9,6 +11,8 @@ function LandingPage() {
       <HerSection />
       <QuickLinks />
       <Categories />
+      <BottomBar />
+      <Footer />
     </div>
   )
 }

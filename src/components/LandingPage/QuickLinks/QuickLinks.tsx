@@ -16,14 +16,14 @@ function QuickLinks() {
     ))}
     </div>
   <div className='grid justify-center sm:hidden gap-3 sm:gap-4 w-full'>
-  <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto'>
+  <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto no-scrollbar'>
     {quickLinks?.slice(0,halfwayIndex).map((item,i)=>(
         <div key={item.id} className='sm:justify-between flex w-full'>
              <IndividualQuickLink item={item}/>
         </div>
     ))}
     </div>
-    <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto'>
+    <div className='flex justify-between w-full gap-4 xxs:gap-5 overflow-x-auto no-scrollbar'>
     {quickLinks?.slice(halfwayIndex).map((item,i)=>(
         <div key={item.id} className='sm:justify-between flex'>
              <IndividualQuickLink item={item}/>
