@@ -2,23 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.icon{
+  color: #9A9A9B;
+  width: 16px;
+  height: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.logoSize{
+  font-weight:700;
+  font-size:28px;
+}
+.mainTitle{
+  font-weight:600;
+  font-size:24px;
+}
+.subTitle {
+  font-weight:600;
+  font-size:20px;
+}
+.mediumTitle{
+  font-weight:600;
+  font-size:18px;
+}
+.normalText{
+  font-weight:400;
+  font-size:14px;
+}
+.smallText{
+  font-weight:400;
+  font-size:12px;
+}
+.smallTextBold{
+  font-weight:500;
+  font-size:10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .logoSize{
+    font-size:24px;
+    font-weight:600;
+  }
+  .mainTitle {
+    font-size: 18px;
+  }
+  .subTitle {
+  font-size:16px;
+   }
+   .mediumTitle{
+    font-size:16px;
+  }
+   .normalText{
+    font-size:12px;
+  }
+  .smallText{
+    font-weight:400;
+    font-size:10px;
+  }
+  .smallTextBold{
+    font-weight:500;
+    font-size:8px;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.slider-container { overflow: hidden;brder: 1px solid red; }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}

@@ -13,15 +13,14 @@ const config: Config = {
       xs: '10px',
       sm: '12px',
       md: '14px',
+      mmd:'16px',
       lg: '18px',
       xl: '20px',
       xxl:'24px'
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-cta': 'linear-gradient(90deg, #9D12F2 0%, #5A088C 100%)',
       },
       screens: {
         xxs: '320px',
