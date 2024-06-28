@@ -7,8 +7,12 @@ import { useRouter } from 'next/navigation';
 
 function NavBar() {
   const router = useRouter();
+
   const moveToCart = () => {
     router.push('/cart')
+  }
+  const moveToHome = () => {
+    router.push('/')
   }
   return (
     <CardWrapper>
@@ -17,7 +21,7 @@ function NavBar() {
   <div className='flex justify-between items-center'>
      <div className='flex items-center gap-2.5'>
      <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18}/>
-      <div className='text-purple_02  logoSize'>WA<span className='text-purple_01'>KI</span></div>
+      <div className='text-purple_02  logoSize' onClick={moveToHome} >WA<span className='text-purple_01'>KI</span></div>
      </div>
 
      <div className='flex items-center gap-5 '> 
@@ -40,7 +44,7 @@ function NavBar() {
 
     <div className='hidden md:flex items-center justify-between my-5'>
      <div>
-      <div className='text-purple_02  logoSize'>WA<span className='text-purple_01'>KI</span></div>
+      <div className='text-purple_02  logoSize' onClick={moveToHome}>WA<span className='text-purple_01'>KI</span></div>
      </div>
 
      <div className='flex items-center gap-5 '> 

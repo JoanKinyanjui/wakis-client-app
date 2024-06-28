@@ -43,7 +43,7 @@ function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUr
      <p className=' text-grey_103 normalText'> ({itemsSold} sold)</p>
       </div>}
     {price && (
-        <div className='flex justify-between'>
+        <div className='flex justify-between items-center'>
         <p className='text-black_101 text-[12px] md:text-[14px] font-[500]'>Ksh {price}</p>
         <p className='text-grey_103 smallText line-through'>Ksh {beforePrice}</p>
       </div>

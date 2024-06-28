@@ -7,7 +7,7 @@ export type ButtonProps = {
 }
 
 export type CategoryHeaderProps ={
-   icon:string;
+   icon?:string;
    headingLeft?:string;
    rightIcon?:boolean;
    headingRight?:string;

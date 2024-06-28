@@ -6,7 +6,7 @@ import Buttons from '../commonComponents/Buttons'
 function Cart() {
   return (
     <div>
-    <CardWrapper customClass='w-full grid md:flex gap-5 mt-2.5 md:mt-5'>
+    <CardWrapper customClass='w-full grid md:flex gap-5 mt-2.5 md:mt-5 md:items-start'>
       <div className='w-full md:w-[65%] px-5 py-5 bg-grey_101/20 shadow-md'>
       <ProductCard />
       </div>
