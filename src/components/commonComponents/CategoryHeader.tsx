@@ -7,7 +7,7 @@ function CategoryHeader({icon,headingLeft,rightIcon,headingRight}:CategoryHeader
   return (
     <div className='flex justify-between mb-2.5 md:mb-2.5'>
         <div className='flex gap-2 md:gap-3.5 items-center'>
-        <Icon icon={icon}  className='shrink-0 w-[16px] md:w-[22px] h-[16px] md:h-[22px]' />
+       {icon &&  <Icon icon={icon}  className='shrink-0 w-[16px] md:w-[22px] h-[16px] md:h-[22px]' />}
         <h1 className='font-[700] text-[15px] md:text-[18px]  lg:text-[20px]'>{headingLeft}</h1>
         </div>
 
