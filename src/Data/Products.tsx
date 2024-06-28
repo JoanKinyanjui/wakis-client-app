@@ -116,7 +116,7 @@ export const Products :ProductsProps[] = [
         id:12,
         title:'Black bareback dress',
         desscription:"Black circular short dress.It has a satin high quality material with bare back",
-        imageUrl:'https://i.pinimg.com/474x/3a/23/d1/3a23d1a3bfe9b7f5899a9b23b1bf2bbb.jpg',
+        imageUrl:'https://i.pinimg.com/474x/a1/fd/a8/a1fda83ccb61517285486566ddd1f371.jpg',
         price:'200',
         beforePrice:"400",
         rating:5,
