@@ -22,7 +22,7 @@ function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUr
        )
        }
          {!isHomeRoute && (
-         <div className='absolute bottom-[3px] right-[3px] flex items-center rounded-[100%] bg-purple_01/50 py-2 md:py-3 px-2 md:px-3'>
+         <div className='absolute bottom-[3px] right-[3px] flex items-center rounded-[100%] bg-purple_01/50 hover:bg-purple_01 py-2 md:py-3 px-2 md:px-3'>
          <Icon icon='material-symbols:add-shopping-cart-rounded' className='text-white_101 w-[15px] md:w-[20px]  h-[15px] md:h-[24px] animate__animated animate__heartBeat animate__delay-1s animate__infinite	animate__slower' />
         </div>
        )

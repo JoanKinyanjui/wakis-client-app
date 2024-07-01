@@ -52,9 +52,9 @@ function Footer() {
        </div>
       </div>
 
-      <div className='grid md:flex gap-2.5 md:gap-0 md:justify-between'>
-      <div>
-       <h4 className='mediumTitle text-black_101'>Join Us</h4>
+      <div className='grid md:flex gap-2.5 md:gap-0  justify-start'>
+      <div className='md:w-1/3'>
+       <h4 className='mediumTitle text-black_101 uppercase'>Join Us</h4>
         <div className='normalText flex gap-2.5 text-black_101 my-2'>
         <Icon icon='logos:tiktok-icon' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
         <Icon icon='skill-icons:instagram' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
@@ -62,8 +62,8 @@ function Footer() {
         <Icon icon='' className=''/>
         </div>
        </div>
-       <div>
-       <h4 className='mediumTitle text-black_101'>Payment Methods</h4>
+       <div className='w-1/3 justify-center  grid'>
+       <h4 className='mediumTitle text-black_101 uppercase'>Payment Methods</h4>
         <div className='normalText text-start text-grey_104  flex gap-5 items-center my-2'>
          <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='mpesa'/>
          <Image src='/assets/images/swyptLogo.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='swypt'/>
