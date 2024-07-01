@@ -9,7 +9,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/91/19/25/911925d20071d4958d68db09cef15c8c.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:4,
         itemsSold:43,
     },
     {
@@ -19,7 +19,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/5c/b3/92/5cb3920ebaaaa5bb3e25e4a4df1c1114.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:4,
         itemsSold:43,
     },
     {
@@ -39,7 +39,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/c4/e2/65/c4e2654a44440ffdc2f2b8b5ef08b39b.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:3,
         itemsSold:43,
     },
     {
@@ -49,7 +49,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/d1/c8/59/d1c859007cb12ca7a1a493218d90bfeb.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:3,
         itemsSold:43,
     },
     {
@@ -59,7 +59,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/60/a9/55/60a955c0c5fab69f615dc927067adb38.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:3,
         itemsSold:43,
     },
     {
@@ -69,7 +69,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/50/19/f2/5019f25f3fafcf48b76ab7acf14ae817.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:2,
         itemsSold:43,
     },
     {
@@ -89,7 +89,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/bd/0c/45/bd0c4582a19474fac6b63c8643f75327.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:2,
         itemsSold:43,
     },
     {
@@ -109,7 +109,7 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/da/d3/c3/dad3c3c5c910ab2be6c79ebdfaae9c5c.jpg',
         price:'200',
         beforePrice:"400",
-        rating:5,
+        rating:4,
         itemsSold:43,
     },
     {
@@ -119,7 +119,37 @@ export const Products :ProductsProps[] = [
         imageUrl:'https://i.pinimg.com/474x/a1/fd/a8/a1fda83ccb61517285486566ddd1f371.jpg',
         price:'200',
         beforePrice:"400",
+        rating:3,
+        itemsSold:43,
+    },
+    {
+        id:13,
+        title:'Black bareback dress',
+        desscription:"Black circular short dress.It has a satin high quality material with bare back",
+        imageUrl:'https://i.pinimg.com/474x/f7/e9/85/f7e9859c95734d174c4b22eddb9cfb1b.jpg',
+        price:'200',
+        beforePrice:"400",
         rating:5,
+        itemsSold:43,
+    },
+    {
+        id:14,
+        title:'Black bareback dress',
+        desscription:"Black circular short dress.It has a satin high quality material with bare back",
+        imageUrl:'https://i.pinimg.com/474x/da/d3/c3/dad3c3c5c910ab2be6c79ebdfaae9c5c.jpg',
+        price:'200',
+        beforePrice:"400",
+        rating:4,
+        itemsSold:43,
+    },
+    {
+        id:15,
+        title:'Black bareback dress',
+        desscription:"Black circular short dress.It has a satin high quality material with bare back",
+        imageUrl:'https://i.pinimg.com/474x/a1/fd/a8/a1fda83ccb61517285486566ddd1f371.jpg',
+        price:'200',
+        beforePrice:"400",
+        rating:3,
         itemsSold:43,
     }
 ]

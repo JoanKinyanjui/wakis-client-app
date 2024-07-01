@@ -16,6 +16,8 @@ function page() {
       imageUrl={item.imageUrl} 
       price={item.price}
       beforePrice={item.beforePrice}
+      rating={item.rating}
+      itemsSold={item.itemsSold}
       />
    ))}
       </div>
