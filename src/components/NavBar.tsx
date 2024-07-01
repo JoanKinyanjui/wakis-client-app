@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <CardWrapper>
 
-    <div className='grid md:hidden gap-2.5 my-2.5'>
+    <div className='grid md:hidden gap-2.5 my-2.5 cursor-pointer'>
   <div className='flex justify-between items-center'>
      <div className='flex items-center gap-2.5'>
      <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18}/>
@@ -42,7 +42,7 @@ function NavBar() {
       </div>
     </div>
 
-    <div className='hidden md:flex items-center justify-between my-5'>
+    <div className='hidden md:flex items-center justify-between my-5 cursor-pointer'>
      <div>
       <div className='text-purple_02  logoSize' onClick={moveToHome}>WA<span className='text-purple_01'>KI</span></div>
      </div>

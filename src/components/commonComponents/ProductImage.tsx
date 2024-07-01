@@ -1,12 +1,17 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import Icon from './Icon'
 import { ProductImageProps } from './types'
+import { usePathname } from 'next/navigation'
 
 function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUrl,officialStore,storeName}:ProductImageProps) {
+  const pathName = usePathname();
+  const isHomeRoute = pathName === '/';
+
   return (
     <div className=' px-1 grid mt-[4px] gap-1 w-full'>
-      <div className={`${price ? 'h-[120px] md:h-[180px] xl:h-[200px] ': 'h-[180px] md:h-[250px] xl:h-[300px] '} w-full rounded-[4px] overflow-hidden relative`}>
+    <div className={` ${officialStore ? 'h-[180px] md:h-[250px] xl:h-[300px]' : isHomeRoute ? 'h-[120px] md:h-[180px] xl:h-[200px] ' :'h-[150px] md:h-[200px] xl:h-[270px] '} w-full rounded-[4px] overflow-hidden relative`}>
         <Image src={imageUrl} className='w-full h-full' layout='fill' alt='product' />
        {discount && (
          <div className='absolute top-0 left-0 flex items-center rounded-[2px] bg-purple_01 py-1 md:py-2 px-1 md:px-2'>
@@ -21,11 +26,13 @@ function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUr
          </div>
     )}
       </div>
+     {title && 
       <div className='w-full overflow-ellipsis'>
       <p className='normalText overflow-hidden whitespace-nowrap text-ellipsis text-grey_104'>
           {title}
         </p>
       </div>
+      }
     {rating && 
       <div className='flex gap-1 items-center'>
       <div className='flex items-center'>

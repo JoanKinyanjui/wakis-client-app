@@ -6,7 +6,7 @@ import Icon from './commonComponents/Icon';
 
 function TopBar() {
   return (
-    <div className='w-full bg-black_101 py-2.5  lg:py-5'>
+    <div className='w-full bg-black_101 py-2.5  lg:py-5 cursor-pointer'>
       <CardWrapper>
    <div className='flex justify-between  '>
     <div className='md:flex hidden w-full gap-5 items-center'>
