@@ -5,10 +5,10 @@ import CustomerReviews from './CustomerReviews/customerReviews'
 import AboutStore from './AboutStore/aboutStore'
 import ItemImages from './ItemImages'
 import MoreInfo from './moreInfo'
-import ItemDescription from './itemDescription'
 import CardWrapper from '../commonComponents/CardWrapper'
 import { Products } from '@/Data/Products'
 import { ProductsProps } from '@/Data/type'
+import ItemFeatures from './ItemFeatures'
 
 interface ItemImagesProps {
   product: string;
@@ -30,12 +30,14 @@ function Item({product}:ItemImagesProps) {
   
   console.log('item ====>', item)
   return (
-    <CardWrapper >
-     <div className='grid lg:flex lg:justify-between gap-5'>
+    <CardWrapper customClass='flex flex-col gap-5' >
+        {item && 
+     <div className='grid md:flex md:justify-between gap-5'>
      <ItemImages item={item} />
      <MoreInfo  item={item}/>
      </div>
-      <ItemDescription />
+          }
+      <ItemFeatures />
       <AboutStore />
       <CustomerReviews />
     </CardWrapper>

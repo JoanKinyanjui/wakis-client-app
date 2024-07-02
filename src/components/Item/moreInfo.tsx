@@ -102,7 +102,7 @@ if(selectedSize?.size === sizeStr){
             <div className='smallText flex gap-2 text-grey_104'>Waist : <p className='text-black_101'>{selectedSize.waist}</p></div>
           </div>
           <div>
-            <div className='smallText flex gap-2 text-grey_104'>Waist : <p className='text-black_101'>{selectedSize.hips}</p></div>
+            <div className='smallText flex gap-2 text-grey_104'>Hips : <p className='text-black_101'>{selectedSize.hips}</p></div>
           </div>
       </div>}
       <div className='flex gap-2.5 md:gap-5'>
@@ -120,7 +120,7 @@ if(selectedSize?.size === sizeStr){
         <p className='smallText text-grey_104'>(Min. order 1 piece)</p>
        </div>
        <div>
-        <p className='line-through smallText'>Ksh 328</p>
+        <p className='line-through smallText text-grey_104'>Ksh 328</p>
        </div>
    </div>
    <div className='w-full flex justify-between items-center'>
@@ -129,7 +129,7 @@ if(selectedSize?.size === sizeStr){
         <p className='smallText text-grey_104'>(5 - 19 pieces)</p>
        </div>
        <div>
-        <p className='line-through smallText'>Ksh 328</p>
+        <p className='line-through smallText text-grey_104'>Ksh 328</p>
        </div>
    </div>
    <div className='w-full flex justify-between items-center'>
@@ -138,7 +138,7 @@ if(selectedSize?.size === sizeStr){
         <p className='smallText text-grey_104'>(&gt;= 20 pieces)</p>
        </div>
        <div>
-        <p className='line-through smallText'>Ksh 328</p>
+        <p className='line-through smallText text-grey_104'>Ksh 328</p>
        </div>
    </div>
       </div>
