@@ -7,6 +7,12 @@ export type ColorOption = {
     name: string;
     value: string;
   };
+  export type sizeMeasureMents = {
+    size:string;
+    bust: string;
+    waist: string;
+    hips:string;
+  };
 
   export type specificOptionsProps = {
     name: string;

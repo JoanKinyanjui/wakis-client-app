@@ -76,8 +76,6 @@ body{
 }
 
 
-.slider-container { overflow: hidden;brder: 1px solid red; }
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

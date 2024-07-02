@@ -12,7 +12,6 @@ function LandingPage() {
       <QuickLinks />
       <Categories />
       <BottomBar />
-      <Footer />
     </div>
   )
 }

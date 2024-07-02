@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import TopBar from "@/components/TopBar";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
          <Suspense fallback={<Loading />}>
          {children}
          </Suspense>
+         <Footer />
         </body>
     </html>
   );
