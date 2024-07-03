@@ -32,7 +32,7 @@ function ItemImages({item}:ItemProps) {
       className='w-[100%] h-[100%] shrink-0 rounded-sm'
        />
     </div>
-    <div className='w-[100%]  md:w-[300px] lg:w-[350px] xl:w-[400px] h-full my-2 md:my-2.5  overflow-auto no-scrollbar'>
+    <div className='w-[100%]  md:w-[300px] lg:w-[350px] xl:w-[400px] h-full my-1  md:my-2.5  overflow-auto no-scrollbar'>
 <div className='flex gap-2 md:gap2.5 w-full '>
    {item.gallery?.map((item,index)=>(
       <Image src={item.imageUrl} 

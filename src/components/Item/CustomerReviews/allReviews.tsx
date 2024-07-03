@@ -1,9 +1,17 @@
 import React from 'react'
+import ReviewsHeader from './ReviewsHeader'
+import Reviews from './Reviews'
+import { ProductsProps } from '@/Data/type';
 
-function AllReviews() {
+interface ItemProps {
+  item: ProductsProps;
+}
+
+function AllReviews({item}:ItemProps) {
   return (
     <div>
-      All Reviews
+   <ReviewsHeader />
+   <Reviews />
     </div>
   )
 }

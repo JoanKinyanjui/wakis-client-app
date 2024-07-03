@@ -1,12 +1,16 @@
 import React from 'react'
 import AllReviews from './allReviews'
 import SummaryReviews from './summaryReviews'
+import { ProductsProps } from '@/Data/type';
 
-function CustomerReviews() {
+interface ItemProps {
+  item: ProductsProps;
+}
+function CustomerReviews({item}:ItemProps) {
   return (
     <div>
-      <SummaryReviews />
-      <AllReviews />
+      <SummaryReviews  item={item}/>
+      <AllReviews item={item} />
     </div>
   )
 }

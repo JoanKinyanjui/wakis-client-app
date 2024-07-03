@@ -30,17 +30,19 @@ function Item({product}:ItemImagesProps) {
   
   console.log('item ====>', item)
   return (
-    <CardWrapper customClass='flex flex-col gap-5 ' >
-        {item && 
+  <>
+  {item &&  
+   <CardWrapper customClass='flex flex-col gap-5 ' >
      <div className='grid md:flex md:justify-between gap-5 cursor-pointer'>
      <ItemImages item={item} />
      <MoreInfo  item={item}/>
      </div>
-          }
       <ItemFeatures />
       <AboutStore />
-      <CustomerReviews />
+      <CustomerReviews item={item} />
     </CardWrapper>
+    }
+  </>
   )
 }
 
