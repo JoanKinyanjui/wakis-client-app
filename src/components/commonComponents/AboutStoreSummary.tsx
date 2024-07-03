@@ -11,7 +11,7 @@ function AboutStoreSummary({name,rating,followers,items,logo} :AboutStoreSummary
       </div>
        <div className='flex gap-2.5 md:gap-5'>
         <div className='w-[70px] h-[70px]'>
-        {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[10px]  shadow-md'/> : null }
+        {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[10px]  shadow-lg'/> : null }
         </div>
         <div className='grid gap-1.5 md:gap-3'>
             <p className='mediumTitle'>{name}</p>

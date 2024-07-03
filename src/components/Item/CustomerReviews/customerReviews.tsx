@@ -8,7 +8,7 @@ interface ItemProps {
 }
 function CustomerReviews({item}:ItemProps) {
   return (
-    <div>
+    <div className='grid gap-5'>
       <SummaryReviews  item={item}/>
       <AllReviews item={item} />
     </div>

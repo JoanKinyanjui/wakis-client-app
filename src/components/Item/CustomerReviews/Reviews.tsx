@@ -1,9 +1,20 @@
+import ClientReview from '@/components/commonComponents/ClientReview'
 import React from 'react'
+import ClientReviewImages from './ClientReviewImages';
 
-function Reviews() {
+type  ReviewsHeaderProps ={
+  allReviews:boolean;
+  imagesOnly:boolean;
+  onSelectATab: (tab:string)=>void;
+}
+function Reviews({allReviews,imagesOnly,onSelectATab}:ReviewsHeaderProps) {
   return (
     <div>
-      reviews
+     {allReviews ? 
+      <ClientReview  />
+    :
+       <ClientReviewImages />
+    }
     </div>
   )
 }
