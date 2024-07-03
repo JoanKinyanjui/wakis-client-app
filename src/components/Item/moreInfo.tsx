@@ -28,6 +28,11 @@ if(selectedSize?.size === sizeStr){
   }
 }
  }
+
+ const [selectedColor,setSelectedColor] = useState<string>('');
+ const onSelectColor =(strColor:string)=>{
+      setSelectedColor(strColor)
+ }
   const rating = item?.rating ?? 0;
   const colorOptions :ColorOption[] = [
     { name: 'Red', value: 'red' },
@@ -94,7 +99,7 @@ if(selectedSize?.size === sizeStr){
       </div>
       {/* sizes specification */}
      {selectedSize &&  
-     <div className='py-4 px-2.5 flex  justify-between bg-grey_102 rounded-md'>
+     <div className='flex  gap-2.5 md:gap-5 rounded-md'>
           <div>
             <div className='smallText flex gap-2 text-grey_104'>Bust : <p className='text-black_101'>{selectedSize.bust}</p></div>
           </div>
@@ -105,9 +110,10 @@ if(selectedSize?.size === sizeStr){
             <div className='smallText flex gap-2 text-grey_104'>Hips : <p className='text-black_101'>{selectedSize.hips}</p></div>
           </div>
       </div>}
+      {/* color specs */}
       <div className='flex gap-2.5 md:gap-5'>
         {colorOptions.map((color,index)=>(
-          <div key={index} className={`w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] rounded-full ` }  style={{ backgroundColor: color.value }}></div>
+          <div key={index} onClick={()=>onSelectColor(color.value)} className={`w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] rounded-full ${selectedColor ===color.value ? 'border-[3px] border-black_101' :''}` }  style={{ backgroundColor: color.value }}></div>
         ))}
 
       </div>
