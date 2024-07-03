@@ -122,7 +122,7 @@ if(selectedSize?.size === sizeStr){
       <div className='grid gap-[2px] md:gap-1 mt-2'>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='mediumTitle'>Ksh 428</p>
+        <p className='normalXText !font-[600]'>Ksh 428</p>
         <p className='smallText text-grey_104'>(Min. order 1 piece)</p>
        </div>
        <div>
@@ -131,7 +131,7 @@ if(selectedSize?.size === sizeStr){
    </div>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='mediumTitle'>Ksh 328</p>
+        <p className='normalXText !font-[600]'>Ksh 328</p>
         <p className='smallText text-grey_104'>(5 - 19 pieces)</p>
        </div>
        <div>
@@ -140,7 +140,7 @@ if(selectedSize?.size === sizeStr){
    </div>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='mediumTitle'>Ksh 128</p>
+        <p className='normalXText !font-[600]'>Ksh 128</p>
         <p className='smallText text-grey_104'>(&gt;= 20 pieces)</p>
        </div>
        <div>
