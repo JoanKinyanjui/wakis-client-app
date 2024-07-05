@@ -10,7 +10,7 @@ function OfficialStores() {
         <div className='w-full flex overflow-x-auto md:space-x-2 flex-shrink-0 no-scrollbar'>
       {Products.slice(6,10).map((item,index)=>(
         <div className='w-[45%] sm:w-[35%] md:w-1/4 flex-shrink-0'>
-        <ProductImage  imageUrl={item.imageUrl} officialStore={true} />
+        <ProductImage id={item.id}  imageUrl={item.imageUrl} officialStore={true} />
         </div>
       ))}
       </div>
