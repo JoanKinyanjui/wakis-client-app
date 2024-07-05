@@ -35,6 +35,7 @@ export type NavItemsProps ={
     link:string;
 }
 export type ProductImageProps = {
+    id:string;
     discount? :boolean;
     title?:string;
     imageUrl:string;

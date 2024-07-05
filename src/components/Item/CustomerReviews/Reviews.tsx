@@ -1,19 +1,21 @@
 import ClientReview from '@/components/commonComponents/ClientReview'
-import React from 'react'
+import React, { useState } from 'react'
 import ClientReviewImages from './ClientReviewImages';
+import { ReviewsProps } from '@/Data/type';
 
 type  ReviewsHeaderProps ={
   allReviews:boolean;
-  imagesOnly:boolean;
-  onSelectATab: (tab:string)=>void;
+  sortedReviews:ReviewsProps[];
+  setSortedReviews: React.Dispatch<React.SetStateAction<ReviewsProps[]>>;
 }
-function Reviews({allReviews,imagesOnly,onSelectATab}:ReviewsHeaderProps) {
+function Reviews({sortedReviews,allReviews,setSortedReviews}:ReviewsHeaderProps) {
+
   return (
     <div>
      {allReviews ? 
-      <ClientReview  />
+      <ClientReview  sortedReviews={sortedReviews} setSortedReviews={setSortedReviews}/>
     :
-       <ClientReviewImages />
+       <ClientReviewImages sortedReviews={sortedReviews} setSortedReviews={setSortedReviews}/>
     }
     </div>
   )

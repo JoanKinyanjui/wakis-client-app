@@ -42,7 +42,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/5c/b3/92/5cb3920ebaaaa5bb3e25e4a4df1c1114.jpg',
                 description:'',
             },
             {
@@ -74,7 +74,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/08/af/3d/08af3df0720e81764d9035db536c2cc3.jpg',
                 description:'',
             },
             {
@@ -106,7 +106,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/c4/e2/65/c4e2654a44440ffdc2f2b8b5ef08b39b.jpg',
                 description:'',
             },
             {
@@ -138,7 +138,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/d1/c8/59/d1c859007cb12ca7a1a493218d90bfeb.jpg',
                 description:'',
             },
             {
@@ -170,7 +170,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/60/a9/55/60a955c0c5fab69f615dc927067adb38.jpg',
                 description:'',
             },
             {
@@ -202,7 +202,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/50/19/f2/5019f25f3fafcf48b76ab7acf14ae817.jpg',
                 description:'',
             },
             {
@@ -228,13 +228,13 @@ export const Products :ProductsProps[] = [
     },
     {
         id:'8',
-        title:'Black bareback dress',
+        title:'Gold Coated Jewellery',
         desscription:"Black circular short dress.It has a satin high quality material with bare back",
         imageUrl:'https://i.pinimg.com/474x/f1/4e/74/f14e74c2eb59a6442721a26561ed9f2d.jpg',
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/f1/4e/74/f14e74c2eb59a6442721a26561ed9f2d.jpg',
                 description:'',
             },
             {
@@ -266,7 +266,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/bd/0c/45/bd0c4582a19474fac6b63c8643f75327.jpg',
                 description:'',
             },
             {
@@ -298,7 +298,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/f7/e9/85/f7e9859c95734d174c4b22eddb9cfb1b.jpg',
                 description:'',
             },
             {
@@ -330,7 +330,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/da/d3/c3/dad3c3c5c910ab2be6c79ebdfaae9c5c.jpg',
                 description:'',
             },
             {
@@ -362,7 +362,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/a1/fd/a8/a1fda83ccb61517285486566ddd1f371.jpg',
                 description:'',
             },
             {
@@ -426,7 +426,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/da/d3/c3/dad3c3c5c910ab2be6c79ebdfaae9c5c.jpg',
                 description:'',
             },
             {
@@ -458,7 +458,7 @@ export const Products :ProductsProps[] = [
           gallery:[
             {
                 id:'1',
-                imageUrl:'https://i.pinimg.com/474x/98/8a/d8/988ad84f29b42a4683e30047a5bc7e3b.jpg',
+                imageUrl:'https://i.pinimg.com/474x/a1/fd/a8/a1fda83ccb61517285486566ddd1f371.jpg',
                 description:'',
             },
             {

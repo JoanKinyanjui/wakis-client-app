@@ -16,7 +16,7 @@ function TopBar() {
    <div className='flex items-center overflow-hidden w-full gap-4 md:gap-5 lg:gap-8 mx-auto justify-between '>
           {NavItems.map((item, index) => (
             <div key={item.id} className='flex-shrink-0'>
-              <Link href={item.link}>
+              <Link href={`${item.link}`}>
                 <p className='text-white_101 text-[12px] md:text-[14px] font-light whitespace-nowrap'>
                   {item.title}
                 </p>

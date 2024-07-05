@@ -12,8 +12,10 @@ function page() {
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-3'>
    {Products.map((item,index)=>(
       <ProductImage 
-      title='Pink satin dress' 
-      imageUrl='https://i.pinimg.com/474x/12/7f/0d/127f0d2ba8c221f9969084b1a95c7079.jpg' 
+      key={item.id}
+      id={item.id}
+      title={item.title}
+      imageUrl={item.gallery[0].imageUrl} 
       price='577'
       beforePrice='600'
       rating={item.rating}

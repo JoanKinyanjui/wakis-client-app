@@ -3,15 +3,20 @@ import Image from 'next/image'
 import React from 'react'
 import Icon from './Icon'
 import { ProductImageProps } from './types'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import 'animate.css';
 
-function ProductImage({title,price,beforePrice,discount,rating,itemsSold,imageUrl,officialStore,storeName}:ProductImageProps) {
+function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imageUrl,officialStore,storeName}:ProductImageProps) {
   const pathName = usePathname();
   const isHomeRoute = pathName === '/';
+  const router = useRouter();
+
+  const moveToProductPage = (id:string) =>{
+      router.push(`/item/${id}`)
+  }
 
   return (
-    <div className=' px-1 grid mt-[4px] gap-[2px] md:gap-1 w-full  rounded-[8px] shadow-lg hover:scale-105'>
+    <div onClick={()=>moveToProductPage(id)} className=' px-1 grid mt-[4px] gap-[2px] md:gap-1 w-full  rounded-[8px] shadow-lg hover:scale-105'>
     <div className={` ${officialStore ? 'h-[180px] md:h-[250px] xl:h-[300px]' : isHomeRoute ? 'h-[120px] md:h-[180px] xl:h-[200px] ' :'h-[180px] md:h-[200px] xl:h-[270px] '} w-full rounded-[4px] overflow-hidden relative`}>
         <Image src={imageUrl} className='w-full h-full' layout='fill' alt='product' />
        {discount && (

@@ -52,7 +52,7 @@ function Footer() {
        </div>
       </div>
 
-      <div className='grid md:flex gap-2.5 md:gap-0  justify-start'>
+      <div className='grid md:flex gap-2.5 md:gap-0  md:justify-start'>
       <div className='md:w-1/3'>
        <h4 className='mediumTitle text-black_101 uppercase'>Join Us</h4>
         <div className='normalText flex gap-2.5 text-black_101 my-2'>
@@ -62,7 +62,7 @@ function Footer() {
         <Icon icon='' className=''/>
         </div>
        </div>
-       <div className='w-1/3 justify-center  grid'>
+       <div className='md:w-1/3 justify-start md:justify-center  grid '>
        <h4 className='mediumTitle text-black_101 uppercase'>Payment Methods</h4>
         <div className='normalText text-start text-grey_104  flex gap-5 items-center my-2'>
          <Image src='/assets/images/mpesa.png' width={24} height={24} className='w-auto min-h-[20px] ' alt='mpesa'/>

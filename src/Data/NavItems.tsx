@@ -4,7 +4,7 @@ export const NavItems:NavItemsProps[] =[
     {
         id:1,
         title:'For You',
-        link:'forYou'
+        link:'/forYou'
     },
     {
         id:2,

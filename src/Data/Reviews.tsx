@@ -1,13 +1,13 @@
 import { ReviewsProps } from "./type";
 
-export const Reviews:ReviewsProps[] =[
+export const ReviewsData:ReviewsProps[] =[
     {
         id:1,
         name:"Joan Kinyanjui",
         content:'I bought this with no pics and I:apos;m glad I did! It:apos;s stretchy so I sized down to a medium since I:apos;m normally a large. A cute lil brunch or date night dress',
         date:'1 Jan, 2023',
         rating:1,
-        likes:6728,
+        likes:2,
         images:[
             {
                 id:1,
@@ -25,7 +25,7 @@ export const Reviews:ReviewsProps[] =[
         content:'I bought this with no pics and I:apos;m glad I did! It:apos;s stretchy so I sized down to a medium since I:apos;m normally a large. A cute lil brunch or date night dress',
         date:'1 May, 2023',
         rating:4,
-        likes:6728,
+        likes: 8,
         images:[
             {
                 id:1,
@@ -51,7 +51,7 @@ export const Reviews:ReviewsProps[] =[
         content:'I bought this with no pics and I:apos;m glad I did! It:apos;s stretchy so I sized down to a medium since I:apos;m normally a large. A cute lil brunch or date night dress',
         date:'01 Aug, 2023',
         rating:3,
-        likes:6728,
+        likes:6,
         images:[
             {
                 id:1,
@@ -72,8 +72,8 @@ export const Reviews:ReviewsProps[] =[
         name:"Phoebe Sawe",
         content:'I bought this with no pics and I:apos;m glad I did! It:apos;s stretchy so I sized down to a medium since I:apos;m normally a large. A cute lil brunch or date night dress',
         date:'29 April, 2024',
-        rating:3,
-        likes:6728,
+        rating:2,
+        likes:8,
         images:[
             {
                 id:1,

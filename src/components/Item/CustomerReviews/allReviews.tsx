@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReviewsHeader from './ReviewsHeader'
 import Reviews from './Reviews'
-import { ProductsProps } from '@/Data/type';
+import { ProductsProps, ReviewsProps } from '@/Data/type';
+import { ReviewsData } from '@/Data/Reviews';
 
 interface ItemProps {
   item: ProductsProps;
@@ -22,10 +23,48 @@ function AllReviews({item}:ItemProps) {
 
   }
 
+  const [sortedReviews,setSortedReviews] = useState<ReviewsProps[]>([]);
+
+  useEffect(()=>{
+    setSortedReviews(ReviewsData);
+  },[])
+
+  const sortByLatest = ()=>{
+    setSortedReviews(ReviewsData);
+  }
+
+  const sortByHighest = ()=>{
+  const result = [...ReviewsData].sort( (a,b)=>{
+    return b.rating-a.rating
+  });
+    setSortedReviews(result);
+  }
+
+  const sortByLowest = ()=>{
+    const result = [...ReviewsData].sort((a,b)=>{
+      return a.rating-b.rating
+    })
+    setSortedReviews(result)
+    
+  }
+
   return (
     <div>
-   <ReviewsHeader  allReviews={allReviews}  imagesOnly={imagesOnly}  onSelectATab={onSelectATab}/>
-   <Reviews  allReviews={allReviews}  imagesOnly={imagesOnly}  onSelectATab={onSelectATab} />
+   <ReviewsHeader  
+    allReviews={allReviews} 
+    imagesOnly={imagesOnly}  
+    onSelectATab={onSelectATab} 
+    sortedReviews={sortedReviews} 
+    sortByLatest={sortByLatest}
+    sortByHighest={sortByHighest}
+    sortByLowest={sortByLowest}
+    />
+
+   <Reviews 
+    allReviews={allReviews}  
+    sortedReviews={sortedReviews}  
+    setSortedReviews={setSortedReviews}
+   />
     </div>
   )
 }

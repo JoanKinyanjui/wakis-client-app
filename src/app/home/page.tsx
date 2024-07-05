@@ -12,10 +12,12 @@ function page() {
       <div className='grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3'>
    {Products.map((item,index)=>(
       <ProductImage 
-      title='Pink satin dress' 
-      imageUrl='https://i.pinimg.com/474x/eb/ee/04/ebee04fea5989bc2f67b54d3b9083d88.jpg' 
-      price='577'
-      beforePrice='600'
+      key={item.id}
+      id={item.id}
+      title= {item.title}
+      imageUrl={item.gallery[0].imageUrl} 
+      price={item.price}
+      beforePrice={item.beforePrice}
       rating={item.rating}
       itemsSold={item.itemsSold}
       />
