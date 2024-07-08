@@ -3,7 +3,7 @@ import React from 'react'
 function RecentlyViewed() {
   return (
     <div>
-      Recently Viewed
+      Recently viewed
     </div>
   )
 }

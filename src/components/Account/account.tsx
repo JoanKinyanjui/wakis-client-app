@@ -1,11 +1,51 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
+import CardWrapper from '../commonComponents/CardWrapper'
+import { accMenuList } from './accountMenu'
+import Icon from '../commonComponents/Icon'
+import AccountDetails from './Contents/accountDetails'
+import Orders from './Contents/Orders'
+import FollowedSellers from './Contents/FollowedSellers'
+import RecentlyViewed from './Contents/RecentlyViewed'
+import EmailPreferences from './Contents/emailPreferences'
 
-function account() {
+function Account() {
+  const [activeContent,setActiveContent] = useState<number>(1);
+  console.log(activeContent);
+
+  const selectActiveMenu = (id:number)=>{
+  setActiveContent(id);
+  }
+
   return (
-    <div>
-      Account Page
+   <CardWrapper customClass='mb-10'>
+     <div className='grid md:flex gap-5 w-full '>
+     <div className='w-full flex overflow-x-auto md:grid md:w-[30%] lg:w-[20%] cursor-pointer '>
+      {accMenuList.map((item,index)=>(
+        <div key={item.id} onClick={()=>selectActiveMenu(item.id)} className={`w-full ${activeContent === item.id ? 'bg-grey_102 ' :"bg-transparent"} rounded-[2px]  py-2 md:py-3 px-4 md:px-2 grid md:flex md:gap-2 items-start md:items-center`}>
+          <Icon  icon={item.icon} className='mx-auto md:mx-0 text-black_101 w-[15px] md:w-[20px] h-[15px] md:h-[20px]'/>
+          <p className='smallText md:normalText text-center md:text-start !font-[500]'>{item.menuTitle}</p>
+        </div>
+      ))}
+     </div>
+
+     <div className='w-full md:w-[70%] lg:w-[80%] '>
+      {(activeContent === 1) ? (
+<div><AccountDetails /></div>
+      ) :(activeContent === 2) ? (
+<div><Orders /></div>
+      ) : (activeContent === 3) ?(
+<div><FollowedSellers /></div>
+      ): (activeContent === 4) ? (
+<div><RecentlyViewed /></div>
+      ): (activeContent === 5) ? (
+<div><EmailPreferences /></div>
+      ): null}
+      
+     </div>
     </div>
+   </CardWrapper>
   )
 }
 
-export default account
+export default Account
