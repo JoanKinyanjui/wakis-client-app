@@ -24,7 +24,7 @@ function AccountDetails() {
     <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
      <div className='flex justify-between items-center'>
      <p className='normalXText text-black_101'>Account Details</p>
-     <p className='text-purple_01 normalText underline !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
+     <p className='text-purple_01 normalText !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
      </div>
       <div className='h-[1px] bg-grey_103 w-full'></div>
       <p>Joan Kinyanjui</p>
@@ -48,7 +48,7 @@ function AccountDetails() {
   <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
   <div className='flex justify-between items-center'>
    <p className='normalXText text-black_101'>Address Details</p>
-   <p className='text-purple_01 normalText underline !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
+   <p className='text-purple_01 normalText !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full'></div>
     <p>13997-00100 Nairobi</p>
