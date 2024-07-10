@@ -26,7 +26,7 @@ function AccountDetails() {
      <p className='normalXText text-black_101'>Account Details</p>
      <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
      </div>
-      <div className='h-[1px] bg-grey_103 w-full normalText'></div>
+      <div className='h-[1px] bg-grey_103 w-full smallText'></div>
       <p>Joan Kinyanjui</p>
       <p>kinyanjuijoan52@gmail.com</p>
     </div>
@@ -50,7 +50,7 @@ function AccountDetails() {
    <p className='normalXText text-black_101'>Address Details</p>
    <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
    </div>
-    <div className='h-[1px] bg-grey_103 w-full normalText'></div>
+    <div className='h-[1px] bg-grey_103 w-full smallText'></div>
     <p>13997-00100 Nairobi</p>
     <p>Kabete</p>
     <p>Nairobi , Kenya</p>
