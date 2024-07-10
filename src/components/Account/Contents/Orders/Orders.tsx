@@ -37,7 +37,7 @@ function Orders() {
 
   return (
     <div className='w-full '>
-    <div className='flex gap-0 justify-between md:justify-start md:gap-6 my-2 md:my-4 '>
+    <div className='flex gap-0 justify-between md:justify-start md:gap-6 mb-2 md:mb-4 '>
       <p className={`smallText md:normalXText uppercase text-center md:text-start ${status === 'processing' ? 'text-purple_01' :'text-black_101'}`} onClick={()=>findStatus('processing')}>Processing ({processed})</p>
       <p className={`smallText md:normalXText uppercase text-center md:text-start ${status === 'delivered' ? 'text-purple_01' :'text-black_101'}`} onClick={()=>findStatus('delivered')}>Delivered ({delivered})</p>
       <p className={`smallText md:normalXText uppercase text-center md:text-start ${status === 'cancelled' ? 'text-purple_01' :'text-black_101'}`} onClick={()=>findStatus('cancelled')}>Cancelled / Returned ({cancelled})</p>

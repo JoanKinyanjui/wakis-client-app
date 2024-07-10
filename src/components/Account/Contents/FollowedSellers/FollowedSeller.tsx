@@ -13,7 +13,7 @@ function FollowedSeller({name,rating,followers,items,logo}:AboutStoreSummaryProp
         {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[10px]  shadow-lg'/> : null }
         </div>
         <div className='grid items-start'>
-            <p className='normalText'>{name}</p>
+            <p className='normalText !font-[500]'>{name}</p>
         <div className='text-grey_103 smallText flex gap-2.5 md:gap-5 items-center'>
         <p>{rating} Rating</p>
         <p>{followers} Followers</p>

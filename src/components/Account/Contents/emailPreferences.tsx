@@ -5,7 +5,7 @@ import React from 'react'
 function EmailPreferences() {
   return (
     <div>
-     <div className='w-full mb-3 pt-4 rounded-md'>
+     <div className='w-full mb-3 rounded-md'>
       <p className='normalText  border-b pb-2 md:pb-3 border-grey_102 w-full !font-[500]'>SUBSCRIBE TO</p>
       <div className='flex gap-1 md:gap-3 items-center normalText text-grey_104'>
         <Radio   sx={{
