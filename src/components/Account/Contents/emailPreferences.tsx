@@ -6,8 +6,8 @@ function EmailPreferences() {
   return (
     <div>
      <div className='w-full mb-3 border-t border-grey_102 py-4 rounded-md'>
-      <p className='normalText'>SUBSCRIBE TO</p>
-      <div className='flex gap-1 md:ap-3 items-center normalText text-grey_104'>
+      <p className='normalText !font-[500]'>SUBSCRIBE TO</p>
+      <div className='flex gap-1 md:gap-3 items-center normalText text-grey_104'>
         <Radio   sx={{
     color: '#D9D9D9',
     '&.Mui-checked': {

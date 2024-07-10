@@ -21,7 +21,7 @@ function Account() {
   return (
    <CardWrapper customClass='mb-10'>
      <div className='grid md:flex gap-5 w-full items-start '>
-     <div className='w-full flex overflow-x-auto md:grid  md:w-[30%] lg:w-[20%] cursor-pointer '>
+     <div className='w-full flex overflow-x-auto md:grid  md:w-[30%] lg:w-[20%] cursor-pointer no-scrollbar '>
       {accMenuList.map((item,index)=>(
         <div key={item.id} onClick={()=>selectActiveMenu(item.id)} className={`w-full ${activeContent === item.id ? 'bg-grey_102 ' :"bg-transparent"} rounded-[2px]  py-2 md:py-3 px-4 md:px-2 grid md:flex md:gap-2 items-start md:items-center`}>
           <Icon  icon={item.icon} className='mx-auto md:mx-0 text-black_101 w-[15px] md:w-[20px] h-[15px] md:h-[20px]'/>
