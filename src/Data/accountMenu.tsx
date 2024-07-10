@@ -27,6 +27,6 @@ export const accMenuList = [
     {   
         id:6,
         menuTitle:'Log Out',
-        icon:"material-symbols:attach-email" ,
+        icon:"ant-design:logout-outlined" ,
     },
 ]
