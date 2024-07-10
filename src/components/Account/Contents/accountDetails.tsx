@@ -8,9 +8,9 @@ function AccountDetails() {
 
   return (
    <>   
-    <div className='grid gap-5 md:flex md:items-start  text-grey_104'>
+    <div className='grid gap-5 md:gap-6 md:flex md:items-start  text-grey_104'>
     {editAccDetails ?
-    <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
+    <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
    <div className='flex justify-between items-center'>
    <p className='normalXText text-black_101'>Account Details</p>
    </div>
@@ -21,10 +21,10 @@ function AccountDetails() {
   </div>
   
     :
-    <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
+    <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
      <div className='flex justify-between items-center'>
      <p className='normalXText text-black_101'>Account Details</p>
-     <p className='text-purple_01 normalText !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
+     <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
      </div>
       <div className='h-[1px] bg-grey_103 w-full'></div>
       <p>Joan Kinyanjui</p>
@@ -33,7 +33,7 @@ function AccountDetails() {
     }
 
 {editAccAddress ? 
-  <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
+  <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
   <div className='flex justify-between items-center'>
    <p className='normalXText text-black_101'>Address Details</p>
    </div>
@@ -45,10 +45,10 @@ function AccountDetails() {
     <div className='border px-3 py-1 bg-black_101 text-white_101 text-center'  onClick={()=>setEditAccAddress(false)}>Save</div>
   </div>
   :
-  <div className='text-start border-[1px] border-grey_102 w-full grid gap-1 px-2 py-2.5'>
+  <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
   <div className='flex justify-between items-center'>
    <p className='normalXText text-black_101'>Address Details</p>
-   <p className='text-purple_01 normalText !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
+   <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full'></div>
     <p>13997-00100 Nairobi</p>
