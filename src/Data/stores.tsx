@@ -23,7 +23,7 @@ export const Stores :StoreProps[] = [
     },
     {
         id:'3',
-        title:'lINDA FORSHE',
+        title:'LINDA FORSHE',
         followers: '400,000',
         description:"We sell legit thrifted fits",
         imageUrl:'https://i.pinimg.com/474x/8b/b1/4f/8bb14fc513398b6fc99936127f2459c4.jpg',

@@ -21,10 +21,12 @@ export type ProductTagProps ={
 
 export type AboutStoreSummaryProps ={
     name:string;
-    rating:string;
-    followers:string;
-    items:string;
+    rating?:number;
+    followers?:string;
+    items?:string;
     logo?:string;
+    addTitle?:boolean;
+    id?:string;
 }
 export type CardWrapperProps ={
     children: ReactNode;
