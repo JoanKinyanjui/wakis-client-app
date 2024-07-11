@@ -4,6 +4,7 @@ export type ButtonProps = {
     buttonText?: string;
     className?:string;
     rounded?:boolean;
+    onClick?:()=>void;
 }
 
 export type CategoryHeaderProps ={

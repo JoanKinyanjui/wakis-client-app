@@ -1,15 +1,15 @@
 import Buttons from '@/components/commonComponents/Buttons'
 import { AboutStoreSummaryProps } from '@/components/commonComponents/types'
-import AboutStore from '@/components/Item/AboutStore/aboutStore'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 
 function FollowedSeller({name,rating,followers,items,logo,id}:AboutStoreSummaryProps) {
+  const router = useRouter();
   return (
     <div className='w-full py-2 rounded-md '>
       <div className='grid gap-2.5 md:gap-5 w-full sm:w-[80%] md:w-3/4 lg:w-[60%] xl:w-1/2' >
-      <Link href={`/stores/${id}`}>
+      
       <div className='flex gap-2.5 md:gap-5'>
         <div className='w-[50px] md:w-[70px] h-[50px] md:h-[70px]'>
         {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[8px]  shadow-lg'/> : null }
@@ -23,10 +23,9 @@ function FollowedSeller({name,rating,followers,items,logo,id}:AboutStoreSummaryP
         </div>
         </div>
        </div>
-      </Link>
 
        <div className='flex gap-2.5 md:gap-5 justify-between md:justify-start'>
-  <Buttons buttonText='All Items' className='border-[1px] border-grey_102 w-full md:w-[154px] text-grey_103 font-normal' rounded={false}/>
+  <Buttons buttonText='All Items' className='border-[1px] border-grey_102 w-full md:w-[154px] text-grey_103 font-normal' rounded={false} onClick={()=>router.push('/stores/3')}/>
   <Buttons buttonText='UnFollow' className='border-[1px] border-grey_102 w-full md:w-[154px] text-grey_103 font-normal' rounded={false}/>
        </div>
     </div>

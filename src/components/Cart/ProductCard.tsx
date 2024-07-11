@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Buttons from '../commonComponents/Buttons'
 import ProductSpecifications from './ProductSpecifications'
 import { ColorOption, SizeOption } from './types'
+import Link from 'next/link'
 
 function ProductCard() {
   const [favourite,setFavourite] = useState(false);
@@ -30,13 +31,15 @@ function ProductCard() {
   return (
     <div className='w-full grid gap-2.5 md:gap-5 relative'>
 
-      <div className='flex items-center justify-between'>
+     <Link href='/stores/3'>
+     <div className='flex items-center justify-between'>
        <div className='flex gap-2.5 items-center'>
        <Icon icon='streamline:store-1-solid' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
-       <p className='normalXText'>Kendy's Thrift Shop</p>
+       <p className='normalXText capitalize'>Linda Forshe</p>
        </div>
         <Icon icon='simple-line-icons:arrow-right' className='w-[12px] h-[12px] md:w-[18px] md:h-[18px] text-black_101'/>
       </div>
+      </Link>
       
       {/* Second row */}
 <div className='flex gap-5'>
