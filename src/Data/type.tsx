@@ -35,3 +35,13 @@ export type ProductsProps = {
     category?:string[],
     gallery:productGallery[];
 }
+export type StoreProps = {
+    id:string;
+    title:string;
+    items?:string;
+    followers?:string;
+    rating?:number;
+    itemsSold?:number;
+    description?:string,
+    imageUrl:string;
+}

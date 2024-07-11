@@ -27,8 +27,8 @@ function AccountDetails() {
      <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
      </div>
       <div className='h-[1px] bg-grey_103 w-full smallText'></div>
-      <p className='smallText no-underline'>Joan Kinyanjui</p>
-      <p className='smallText no-underline'>kinyanjuijoan52@gmail.com</p>
+      <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>Joan Kinyanjui</p>
+      <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>kinyanjuijoan52@gmail.com</p>
     </div>
     }
 
@@ -51,10 +51,10 @@ function AccountDetails() {
    <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full smallText'></div>
-    <p className='smallText no-underline'>13997-00100 Nairobi</p>
-    <p className='smallText no-underline'>Kabete</p>
-    <p className='smallText no-underline'>Nairobi , Kenya</p>
-    <p className='smallText no-underline'>kinyanjuijoan52@gmail.com</p>
+    <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>13997-00100 Nairobi</p>
+    <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>Kabete</p>
+    <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>Nairobi , Kenya</p>
+    <p className='no-underline text-[10px] sm:text-[12px] md:text-[14px]'>kinyanjuijoan52@gmail.com</p>
   </div>
 
 }

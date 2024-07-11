@@ -11,6 +11,7 @@ export type CategoryHeaderProps ={
    headingLeft?:string;
    rightIcon?:boolean;
    headingRight?:string;
+   link?:string;
 }
 
 export type ProductTagProps ={

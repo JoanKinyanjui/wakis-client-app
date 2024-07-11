@@ -6,7 +6,7 @@ import { ProductImageProps } from './types'
 import { usePathname, useRouter } from 'next/navigation'
 import 'animate.css';
 
-function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imageUrl,officialStore,storeName}:ProductImageProps) {
+function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imageUrl,storeName}:ProductImageProps) {
   const pathName = usePathname();
   const isHomeRoute = pathName === '/';
   const router = useRouter();
@@ -17,7 +17,7 @@ function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imag
 
   return (
     <div onClick={()=>moveToProductPage(id)} className=' px-1 grid mt-[4px] gap-[2px] md:gap-1 w-full  rounded-[8px] shadow-lg hover:scale-105'>
-    <div className={` ${officialStore ? 'h-[180px] md:h-[250px] xl:h-[300px]' : isHomeRoute ? 'h-[120px] md:h-[180px] xl:h-[200px] ' :'h-[180px] md:h-[200px] xl:h-[270px] '} w-full rounded-[4px] overflow-hidden relative`}>
+    <div className={` ${isHomeRoute ? 'h-[120px] md:h-[180px] xl:h-[200px] ' :'h-[180px] md:h-[200px] xl:h-[270px] '} w-full rounded-[4px] overflow-hidden relative`}>
         <Image src={imageUrl} className='w-full h-full' layout='fill' alt='product' />
        {discount && (
          <div className='absolute top-0 left-0 flex items-center rounded-[2px] bg-purple_01 py-1 md:py-2 px-1 md:px-2'>
@@ -26,17 +26,12 @@ function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imag
         </div>
        )
        }
-         {!isHomeRoute && (
+         {!isHomeRoute  && (
          <div className='absolute bottom-[3px] right-[3px] flex items-center rounded-[100%] bg-purple_01/50 hover:bg-purple_01 py-2 md:py-3 px-2 md:px-3'>
          <Icon icon='material-symbols:add-shopping-cart-rounded' className='text-white_101 w-[15px] md:w-[20px]  h-[15px] md:h-[24px] animate__animated animate__heartBeat animate__delay-1s animate__infinite	animate__slower' />
         </div>
        )
        }
-    {officialStore && (
-          <div className='py-1 md:py-2 bg-black_101 text-white_101 absolute bottom-0 left-0 w-full'>
-          <p className='flex justify-center normalTitle uppercase'>ZIA</p>
-         </div>
-    )}
       </div>
      {title && 
       <div className='w-full overflow-ellipsis'>

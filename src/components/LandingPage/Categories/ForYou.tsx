@@ -8,7 +8,7 @@ import React from 'react';
 function ForYou() {
   return (
    <div className='w-full'>
-      <CategoryHeader icon='streamline:magic-wand-2-solid' headingLeft='FOR YOU' rightIcon={true} />
+      <CategoryHeader link='forYou' icon='streamline:magic-wand-2-solid' headingLeft='FOR YOU' rightIcon={true} />
       <div className='w-full flex overflow-x-auto space-x-2 no-scrollbar'>
       {Products.slice(3,9).map((item,index)=>(
         <div className='w-[100px] xxs:w-[120px] md:w-[25%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>

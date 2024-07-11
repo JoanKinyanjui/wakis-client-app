@@ -6,7 +6,7 @@ import React from 'react'
 function FlashSale() {
   return (
     <div className='w-full'>
-         <CategoryHeader icon='typcn:flash' headingLeft='FLASH SALE' rightIcon={true} headingRight='GRAB NOW' />
+         <CategoryHeader link='flashSale' icon='typcn:flash' headingLeft='FLASH SALE' rightIcon={true} headingRight='GRAB NOW' />
       <div className='w-full flex overflow-x-auto space-x-2 no-scrollbar '>
       {Products.slice(0,6).map((item,index)=>(
         <div className='w-[100px] xxs:w-[120px] md:w-[25%] lg:w-1/5 xl:w-1/6 flex-shrink-0'>

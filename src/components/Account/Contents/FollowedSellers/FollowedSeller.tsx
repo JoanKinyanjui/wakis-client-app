@@ -14,7 +14,7 @@ function FollowedSeller({name,rating,followers,items,logo}:AboutStoreSummaryProp
         </div>
         <div className='grid items-start'>
             <p className='normalText !font-[500]'>{name}</p>
-        <div className='text-grey_103 smallText flex gap-2.5 md:gap-5 items-center'>
+        <div className='text-grey_103 text-[10px] sm:text-[12px] md:text-[14px] flex gap-2.5 md:gap-5 items-center'>
         <p>{rating} Rating</p>
         <p>{followers} Followers</p>
         <p>{items} Items</p>
