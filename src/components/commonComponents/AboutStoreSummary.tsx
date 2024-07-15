@@ -50,7 +50,7 @@ function AboutStoreSummary({
       </div>}
 
        <div className='flex gap-2.5 md:gap-5 justify-between md:justify-start'>
-  <Buttons buttonText='All Items' className='border-[1px] border-grey_104 w-full md:w-[174px] text-grey_103 font-normal' rounded={false} onClick={()=>router.push('/stores/3')}/>
+  <Buttons buttonText={`${addTitle ? 'All Items' : 'Share'}`} className='border-[1px] border-grey_104 w-full md:w-[174px] text-grey_103 font-normal' rounded={false} onClick={()=>router.push('/stores/3')}/>
   <Buttons buttonText='+ Follow' className='border-[1px] border-grey_104 w-full md:w-[174px] text-grey_103 font-normal' rounded={false}/>
        </div>
     </div>

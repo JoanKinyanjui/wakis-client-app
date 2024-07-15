@@ -20,6 +20,7 @@ function WishList() {
      <div className='grid gap-1'>
      <p className='text-black_101 normalText capitalize !font-[500]'>{item.title}</p>
      <p className='smallText text-grey_104'>{item.desscription}</p>
+     <p className='normalText text-black_101 !font-[500]'>Ksh {item.price}</p>
      {((Number(item.id) % 2 === 0 ?  <p className='smallText flex justify-center w-[max-content] bg-grey_102 px-4 md:px-6 py-2 rounded-md text-grey_104'> OUT OF STOCK   </p> : null))}
      </div>
      </div>

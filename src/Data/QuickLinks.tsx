@@ -32,14 +32,14 @@ export const quickLinks:QuickLinks[] = [
     {
         id:5,
         title:'Bags & Luggage',
-        link:'/bags&Luggage',
+        link:'/bags&luggage',
         alt:'bags and luggage',
         image:'https://i.pinimg.com/474x/9e/cc/99/9ecc99fdf8d82145d73aac7ba642550c.jpg',
     },
     {
         id:6,
         title:'Sports and OutDoors',
-        link:'/sport&Outdoors',
+        link:'/sports&outdoors',
         alt:'sports and outdoors',
         image:'https://i.pinimg.com/564x/4f/f0/56/4ff056a31fddf28b710fef000f0f52c1.jpg',
     },
@@ -66,8 +66,8 @@ export const quickLinks:QuickLinks[] = [
     },
     {
         id:10,
-        title:'Beauty',
-        link:'/beauty',
+        title:'Beauty & Makeup',
+        link:'/beauty&makeup',
         alt:'beauty',
         image:'https://i.pinimg.com/474x/9f/1d/a4/9f1da4e5426c7d353352748da9b6667b.jpg',
     },
