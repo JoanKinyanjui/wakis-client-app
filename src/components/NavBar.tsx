@@ -1,9 +1,13 @@
 "use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CardWrapper from './commonComponents/CardWrapper';
 import Icon from './commonComponents/Icon';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { NavItems } from '@/Data/NavItems';
+import { Drawer } from '@mui/material';
+import Link from 'next/link';
+import DrawerComponent from './commonComponents/DrawerComponent';
 
 function NavBar() {
   const router = useRouter();
@@ -20,13 +24,22 @@ function NavBar() {
   const moveToAccount = () => {
     router.push('/account')
   }
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
+  };
+  const [open, setOpen] = React.useState(false);
+
   return (
     <CardWrapper>
 
     <div className='grid md:hidden gap-2.5 mt-2.5 cursor-pointer'>
   <div className='flex justify-between items-center'>
      <div className='flex items-center gap-2.5'>
-     <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18}/>
+     <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18} onClick={toggleDrawer(true)}/>
+     <Drawer open={open} onClose={toggleDrawer(false)}>
+   <DrawerComponent />
+     </Drawer>
       <div className='text-purple_02  logoSize' onClick={moveToHome} >WA<span className='text-purple_01'>KI</span></div>
      </div>
 
