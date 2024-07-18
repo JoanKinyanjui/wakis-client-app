@@ -5,7 +5,7 @@ import Icon from './commonComponents/Icon'
 
 function Footer() {
   return (
-    <div className='w-full bg-grey_102 h-full py-5 md:py-10 '>
+    <div className='w-full bg-grey_102 h-full pt-5 md:pt-10 pb-2.5 md:pb-5 '>
       <CardWrapper customClass='grid gap-2.5 md:gap-5'>
       <div className='grid md:flex gap-2.5 md:gap-0 md:justify-between'>
        <div>
@@ -73,7 +73,7 @@ function Footer() {
        </div>
       </div>
 
-      <div className='border-t-[1px] border-grey_103 text-grey_104 italic justify-center flex text-[10px] md:text-[12px] py-2'>
+      <div className='border-t-[1px] border-grey_103 text-grey_104 italic justify-center flex text-[10px] md:text-[12px] pt-4'>
    <p>&copy;copyright2024 || All rights reserved</p>
       </div>
       </CardWrapper>
