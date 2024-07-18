@@ -3,8 +3,8 @@ import CardWrapper from './commonComponents/CardWrapper'
 
 function HerSection() {
   return (
-  <CardWrapper>
-<div className='relative h-[120px] xxs:h-[140px] sm:h-[270px] md:h-[360px] xl:h-[450px] 2xl:h-[500px] rounded-2 overflow-hidden mt-2 md:mt-5 rounded-[8px] md:rounded-[8px] border'>
+  <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto'>
+<div className='relative h-[130px] xxs:h-[150px] sm:h-[270px] md:h-[360px] xl:h-[450px] 2xl:h-[500px] rounded-2 overflow-hidden mt-2 md:mt-5 rounded-[8px] md:rounded-[8px] border'>
   <video className='absolute inset-0 object-cover w-full h-full' autoPlay loop muted>
     <source src='/assets/videos/hero.mp4' type='video/mp4' />
     Your browser does not support the video tag.
@@ -22,7 +22,7 @@ function HerSection() {
   </div>
 </div>
 
-  </CardWrapper>
+  </div>
   )
 }
 
