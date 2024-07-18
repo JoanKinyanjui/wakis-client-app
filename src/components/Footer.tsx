@@ -41,7 +41,7 @@ function Footer() {
 
       <div className='grid md:flex gap-2.5 md:gap-0 md:justify-between'>
       <div>
-       <h4 className='mediumTitle text-black_101'>Useful Links</h4>
+       <h4 className='mediumTitle text-black_101 uppercase'>Useful Links</h4>
         <div className='normalText text-start text-grey_104'>
           <p>Track your Order</p>
           <p>Shipping and Delivery</p>

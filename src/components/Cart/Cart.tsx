@@ -1,9 +1,12 @@
+"use client"
 import React from 'react'
 import CardWrapper from '../commonComponents/CardWrapper'
 import ProductCard from './ProductCard'
 import Buttons from '../commonComponents/Buttons'
+import { useRouter } from 'next/navigation'
 
 function Cart() {
+  const router= useRouter();
   return (
     <div>
     <CardWrapper customClass='w-full grid md:flex gap-5 mt-2.5 md:mt-5 md:items-start'>
@@ -20,7 +23,11 @@ function Cart() {
         <p>Ksh 0</p>
       </div>
       <div>
-        <Buttons className='bg-black_101 text-white_101 py-3' buttonText={`CHECKOUT ( KSH 0 )`}/>
+        <Buttons 
+        onClick={()=>router.push('/checkout')}
+         className='bg-black_101 text-white_101 py-3'
+         buttonText={`CHECKOUT ( KSH 0 )`}
+        />
       </div>
       </div>
     </CardWrapper>

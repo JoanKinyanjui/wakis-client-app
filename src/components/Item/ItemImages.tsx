@@ -42,7 +42,7 @@ function ItemImages({item}:ItemProps) {
       alt='img' 
       width={100}
       height={100}
-      className={`${activeImage === item.imageUrl ? 'scale-100 border-[5px]  rounded-sm shadow-lg' : '' }  w-[100px] sm:w-[120px] h-[70px] md:w-[100px] md:h-[100px] shrink-0`}
+      className={`${activeImage === item.imageUrl ? 'scale-120 border-[5px]  rounded-sm shadow-lg' : '' }  w-[100px] sm:w-[120px] h-[70px] md:w-[100px] md:h-[100px] shrink-0 `}
       onClick={()=>onSelectImage(item.imageUrl)}
        />
    ))}

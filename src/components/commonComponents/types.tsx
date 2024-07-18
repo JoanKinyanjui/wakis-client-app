@@ -51,3 +51,8 @@ export type ProductImageProps = {
     officialStore?:boolean;
     storeName?: string;
 }
+
+export type CheckoutWrapperProps ={
+    title:string;
+    onChangeInfo:()=>void;
+}

@@ -31,9 +31,9 @@ function NavBar() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <CardWrapper>
+    <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto py-5'>
 
-    <div className='grid md:hidden gap-2.5 mt-2.5 cursor-pointer'>
+    <div className='grid md:hidden gap-2.5  cursor-pointer'>
   <div className='flex justify-between items-center'>
      <div className='flex items-center gap-2.5'>
      <Image  src='/assets/icons/menuBar.svg' alt='' width={18} height={18} onClick={toggleDrawer(true)}/>
@@ -61,7 +61,7 @@ function NavBar() {
       </div>
     </div>
 
-    <div className='hidden md:flex items-center justify-between mt-5 cursor-pointer'>
+    <div className='hidden md:flex items-center justify-between  cursor-pointer'>
      <div>
       <div className='text-purple_02  logoSize' onClick={moveToHome}>WA<span className='text-purple_01'>KI</span></div>
      </div>
@@ -83,7 +83,7 @@ function NavBar() {
      </div>
     </div>
 
-    </CardWrapper>
+    </div>
   )
 }
 
