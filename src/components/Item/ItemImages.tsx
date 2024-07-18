@@ -22,7 +22,7 @@ function ItemImages({item}:ItemProps) {
     <>
     {item && 
     <div className='grid '>
-    <div className='w-[100%]  h-[250px] xxs:h-[290px] md:w-[300px] lg:w-[350px] xl:w-[400px]  md:h-[350px] lg:h-[400px] rounded-md  '>
+    <div className='w-[100%]  h-[260px] xxs:h-[290px] md:w-[300px] lg:w-[350px] xl:w-[400px]  md:h-[350px] lg:h-[400px] rounded-md  '>
       <Image src={activeImage ?? item.gallery[0].imageUrl} 
       blurDataURL="data:..."
       placeholder='blur'
@@ -42,7 +42,7 @@ function ItemImages({item}:ItemProps) {
       alt='img' 
       width={100}
       height={100}
-      className={`${activeImage === item.imageUrl ? 'scale-120 border-[5px]  rounded-sm shadow-lg' : '' }  w-[100px] sm:w-[120px] h-[70px] md:w-[100px] md:h-[100px] shrink-0 `}
+      className={`${activeImage === item.imageUrl ? 'scale-90 border-[5px]  rounded-sm shadow-lg' : '' }  w-[100px] sm:w-[120px] h-[75px] md:w-[100px] md:h-[100px] shrink-0 scale-100 `}
       onClick={()=>onSelectImage(item.imageUrl)}
        />
    ))}
