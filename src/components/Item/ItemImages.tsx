@@ -22,7 +22,7 @@ function ItemImages({item}:ItemProps) {
     <>
     {item && 
     <div className='grid '>
-    <div className='w-[90%]  h-[250px] xxs:h-[290px] md:w-[300px] lg:w-[350px] xl:w-[400px]  md:h-[350px] lg:h-[400px] rounded-md  '>
+    <div className='w-[95%]  h-[250px] xxs:h-[290px] md:w-[300px] lg:w-[350px] xl:w-[400px]  md:h-[350px] lg:h-[400px] rounded-md  '>
       <Image src={activeImage ?? item.gallery[0].imageUrl} 
       blurDataURL="data:..."
       placeholder='blur'
