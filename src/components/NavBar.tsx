@@ -31,7 +31,7 @@ function NavBar() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto py-5'>
+    <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto py-2.5 md:py-5'>
 
     <div className='grid md:hidden gap-2.5  cursor-pointer'>
   <div className='flex justify-between items-center'>

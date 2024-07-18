@@ -22,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
-         <TopBar />
+       <div className="bg-white_101 sticky top-0 w-full z-[1000]">
+       <NavBar />
+       <TopBar />
+       </div>
          <Suspense fallback={<Loading />}>
          {children}
          </Suspense>
