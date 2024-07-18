@@ -26,7 +26,7 @@ function DrawerComponent() {
    <div className='normalText font-[400] px-4'>
    {NavItems.map((item,index)=>(
      <Link href={item.link}>
-      <div className={`${activeNav === item.link ? 'text-purple_01 !font-[500]' : 'text-grey_104 !font-[500]' } py-2`}>{item.title} </div></Link>
+      <div className={`${activeNav === item.link ? 'text-purple_01 !font-[500]' : 'text-black_101/80 !font-[500]' } py-2`}>{item.title} </div></Link>
     ))}
    </div>
    <div className='absolute bg-grey_102 py-1 items-center bottom-0 w-full justify-center'>
