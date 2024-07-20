@@ -10,7 +10,7 @@ const crimsonText = Crimson_Text({ subsets: ['latin'], weight: ['400', '600', '7
 
 function AuthComponent({title,confirm,buttonText,haveAcc}:AuthComponentProps) {
   return (
-    <div className='w-[300px] xxs:w-[350px] xs:w-[400px] md:w-[500px]  mx-auto bg-purple_01/10 rounded-[8px] md:rounded-[20px] p-5 md:p-8'>
+    <div className='w-[300px] xs:w-[400px] md:w-[500px]  mx-auto bg-purple_01/10 rounded-[20px] md:rounded-[20px] p-5 md:p-8'>
   
   <div className='w-full flex justify-center pb-2.5 md:pb-5'>
   <p className={crimsonText.className} style={{fontWeight:700}}>{title}</p>
@@ -98,7 +98,7 @@ function AuthComponent({title,confirm,buttonText,haveAcc}:AuthComponentProps) {
 </div>
 </div>
 
-<div className='flex mx-auto '>
+<div className='flex mx-auto gap-1'>
   <p className='text-grey_104 normalText !font-[500]'>{haveAcc ? "Don't have an account ?" : 'Already have an account ?'}</p>
   <p className='text-purple_01 !font-[500] normalText'>{haveAcc ? "Sign Up" : "Login"}</p>
 </div>

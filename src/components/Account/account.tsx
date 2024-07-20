@@ -9,6 +9,21 @@ import FollowedSellers from './Contents/FollowedSellers/FollowedSellers'
 import RecentlyViewed from './Contents/RecentlyViewed'
 import EmailPreferences from './Contents/emailPreferences'
 import Logout from './Contents/Logout'
+import Modal from '@mui/material/Modal';
+import Login from './Auth/Login';
+import { Box } from '@mui/material'
+
+const style = {
+      position: 'absolute' as 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      boxShadow: 24,
+      backgroundColor:"white",
+      borderRadius:"20px",
+      border:'1px solid transparent',
+      outline:"none",
+    };
 
 function Account() {
   const [activeContent,setActiveContent] = useState<number>(1);
@@ -17,6 +32,14 @@ function Account() {
   const selectActiveMenu = (id:number)=>{
   setActiveContent(id);
   }
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  useEffect(()=>{
+      handleOpen();
+  },[])
 
   return (
    <CardWrapper customClass='mb-10'>
@@ -47,8 +70,21 @@ function Account() {
       
      </div>
     </div>
+
+    <Modal
+    aria-labelledby="keep-mounted-modal-title"
+    aria-describedby="keep-mounted-modal-description"
+    open={open}
+    onClose={handleClose}
+    >
+       <Box sx={style}>
+            <Login />
+       </Box>
+    </Modal>
    </CardWrapper>
   )
 }
 
-export default Account
+export default Account;
+
+
