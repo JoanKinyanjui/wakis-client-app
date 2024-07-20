@@ -8,3 +8,10 @@ export type OrderProps  = {
     date?:string;
     status?:orderStatus
 }
+
+export type AuthComponentProps ={
+    title:string;
+    confirm:boolean;
+    buttonText:string;
+    haveAcc:boolean;
+}
