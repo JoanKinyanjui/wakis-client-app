@@ -32,7 +32,7 @@ function DrawerComponent() {
    <div className='absolute bg-grey_102 py-1 items-center bottom-0 w-full justify-center'>
    <div className='normalText flex justify-evenly w-full gap-2.5 my-2'>
         <Icon icon='logos:tiktok-icon' className='w-[24px] h-[24px] '/>
-        <Icon icon='skill-icons:instagram' className='w-[24px] h-[24px] '/>
+        <Link href='https://www.instagram.com/waki.s_line/'><Icon icon='skill-icons:instagram' className='w-[24px] h-[24px]'/></Link>
         <Icon icon='fa6-brands:square-x-twitter' className='w-[24px] h-[24px] '/>
         <Icon icon='' className=''/>
     </div>

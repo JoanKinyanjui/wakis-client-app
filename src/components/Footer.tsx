@@ -2,6 +2,7 @@ import React from 'react'
 import CardWrapper from './commonComponents/CardWrapper'
 import Image from 'next/image'
 import Icon from './commonComponents/Icon'
+import Link from 'next/link'
 
 function Footer() {
   return (
@@ -57,7 +58,7 @@ function Footer() {
        <h4 className='mediumTitle text-black_101 uppercase'>Join Us</h4>
         <div className='normalText flex gap-2.5 text-black_101 my-2'>
         <Icon icon='logos:tiktok-icon' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
-        <Icon icon='skill-icons:instagram' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
+        <Link href='https://www.instagram.com/waki.s_line/'><Icon icon='skill-icons:instagram' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/></Link>
         <Icon icon='fa6-brands:square-x-twitter' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
         <Icon icon='' className=''/>
         </div>
