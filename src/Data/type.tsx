@@ -26,7 +26,7 @@ type productGallery = {
 export type ProductsProps = {
     id:string;
     title?:string;
-    price:string;
+    price:number;
     beforePrice:string;
     rating?:number;
     itemsSold?:number;
@@ -34,6 +34,8 @@ export type ProductsProps = {
     imageUrl:string;
     category?:string[],
     gallery:productGallery[];
+    quantity:number;
+    storeName?:string;
 }
 export type StoreProps = {
     id:string;

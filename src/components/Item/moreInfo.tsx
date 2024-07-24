@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { ColorOption, SizeOption, sizeMeasureMents } from '../Cart/types';
 import Buttons from '../commonComponents/Buttons';
 import Icon from '../commonComponents/Icon';
+import { useAppDispatch } from '@/lib/hooks';
+import { addToCart } from '@/lib/features/cart/cartSlice';
 
 interface ItemProps {
   item: ProductsProps;
@@ -55,6 +57,8 @@ if(selectedSize?.size === sizeStr){
     { size: 'XL' , bust:'100cm'  , waist:'84cm', hips:'106cm'},
   ];
 
+  // AddToCart
+  const dispatch = useAppDispatch();
 
   return (
   <>
@@ -151,12 +155,13 @@ if(selectedSize?.size === sizeStr){
 
       {/* Add To Cart Button */}
       <div className='flex gap-5'>
-<Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2'/>
+<Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2' onClick={()=>dispatch(addToCart(item))}/>
 <Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' onClick={addToFavourite}/>
 <Icon icon='ooui:share'  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' />
       </div>
      
-    </div>}
+    </div>
+    }
   </>
   )
 }

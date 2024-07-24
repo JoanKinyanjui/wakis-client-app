@@ -8,6 +8,7 @@ import { NavItems } from '@/Data/NavItems';
 import { Drawer } from '@mui/material';
 import Link from 'next/link';
 import DrawerComponent from './commonComponents/DrawerComponent';
+import { useAppSelector } from '@/lib/hooks';
 
 function NavBar() {
   const router = useRouter();
@@ -30,6 +31,9 @@ function NavBar() {
   };
   const [open, setOpen] = React.useState(false);
 
+
+  // CartBadge
+  const {quantity} = useAppSelector((state)=>state.cart)
   return (
     <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto py-2.5 md:py-5'>
 
@@ -50,8 +54,14 @@ function NavBar() {
      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveWishList}>
         <Icon icon='mdi:favourite' className='icon'  />
       </div>
-     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveToCart}>
+     <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center relative' onClick={moveToCart}>
         <Icon icon='mdi:cart' className='icon'  />
+       {
+       quantity === 0 
+       ? 
+       null :
+        <div className='w-[15px] h-[15px] bg-purple_01 rounded-full absolute top-[-5px] right-0 text-[8px] flex  text-white_101 justify-center items-center '>{quantity}</div>
+        }
       </div>
      </div>
   </div>
@@ -77,9 +87,15 @@ function NavBar() {
      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveWishList}>
      <Icon icon='mdi:favourite' className='icon' />
       </div>
-     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveToCart}>
+     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center relative' onClick={moveToCart}>
      <Icon icon='mdi:cart' className='icon'  />
-      </div>
+     {
+       quantity === 0 
+       ? 
+       null :
+        <div className='w-[22px] h-[22px] bg-purple_01 rounded-full absolute top-[-5px] right-0 text-[8px] flex  text-white_101 justify-center items-center '>{quantity}</div>
+        }
+        </div>
      </div>
     </div>
 
