@@ -35,7 +35,7 @@ export type ProductsProps = {
     category?:string[],
     gallery:productGallery[];
     quantity:number;
-    storeName?:string;
+    storeName:string;
 }
 export type StoreProps = {
     id:string;

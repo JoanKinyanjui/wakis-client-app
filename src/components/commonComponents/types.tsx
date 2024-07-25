@@ -1,3 +1,4 @@
+import { ProductsProps } from "@/Data/type";
 import { ReactNode } from "react";
 
 export type ButtonProps = {
@@ -39,11 +40,12 @@ export type NavItemsProps ={
     link:string;
 }
 export type ProductImageProps = {
+    item:ProductsProps;
     id:string;
     discount? :boolean;
     title?:string;
     imageUrl:string;
-    price?:string;
+    price?:number;
     beforePrice?:string;
     rating?:number;
     itemsSold?:number;

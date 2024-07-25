@@ -5,14 +5,24 @@ import Icon from './Icon'
 import { ProductImageProps } from './types'
 import { usePathname, useRouter } from 'next/navigation'
 import 'animate.css';
+import { addToCart } from '@/lib/features/cart/cartSlice'
+import { useAppDispatch } from '@/lib/hooks'
+import { ProductsProps } from '@/Data/type'
 
-function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imageUrl,storeName}:ProductImageProps) {
+function ProductImage({item,id,title,price,beforePrice,discount,rating,itemsSold,imageUrl,storeName}:ProductImageProps) {
   const pathName = usePathname();
   const isHomeRoute = pathName === '/';
   const router = useRouter();
 
   const moveToProductPage = (id:string) =>{
       router.push(`/item/${id}`)
+  }
+
+  // AddTo Cart
+  const dispatch = useAppDispatch();
+  const addToCartBtn = (e:React.MouseEvent,item:ProductsProps)=>{
+    e.stopPropagation();
+    dispatch(addToCart(item))
   }
 
   return (
@@ -27,8 +37,10 @@ function ProductImage({id,title,price,beforePrice,discount,rating,itemsSold,imag
        )
        }
          {!isHomeRoute  && (
-         <div className='absolute bottom-[3px] right-[3px] flex items-center rounded-[100%] bg-purple_01/50 hover:bg-purple_01 py-2 md:py-3 px-2 md:px-3'>
-         <Icon icon='material-symbols:add-shopping-cart-rounded' className='text-white_101 w-[15px] md:w-[20px]  h-[15px] md:h-[24px] animate__animated animate__heartBeat animate__delay-1s animate__infinite	animate__slower' />
+         <div   onClick={(e)=>{addToCartBtn(e,item)}} className='absolute bottom-[3px] right-[3px] flex items-center rounded-[100%] bg-purple_01/50 hover:bg-purple_01/70 py-2 md:py-3 px-2 md:px-3'>
+         <Icon 
+         icon='material-symbols:add-shopping-cart-rounded' 
+         className='text-white_101 w-[15px] md:w-[20px]  h-[15px] md:h-[24px] animate__animated animate__heartBeat animate__delay-1s animate__infinite	animate__slower' />
         </div>
        )
        }

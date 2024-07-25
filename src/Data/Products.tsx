@@ -68,7 +68,7 @@ export const Products :ProductsProps[] = [
         rating:4,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Linda",
     },
     {
         id:'3',
@@ -102,7 +102,7 @@ export const Products :ProductsProps[] = [
         rating:5,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Waki",
     }
     , {
         id:'4',
@@ -136,7 +136,7 @@ export const Products :ProductsProps[] = [
         rating:3,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Zia",
     },
     {
         id:'5',
@@ -170,7 +170,7 @@ export const Products :ProductsProps[] = [
         rating:3,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Bellani",
     },
     {
         id:'6',
@@ -238,7 +238,7 @@ export const Products :ProductsProps[] = [
         rating:2,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Bellani",
     },
     {
         id:'8',
@@ -272,7 +272,7 @@ export const Products :ProductsProps[] = [
         rating:5,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Linda",
     },
     {
         id:'9',
@@ -306,7 +306,7 @@ export const Products :ProductsProps[] = [
         rating:2,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Waki",
     },
     {
         id:'10',
@@ -340,7 +340,7 @@ export const Products :ProductsProps[] = [
         rating:5,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Waki",
     },
     {
         id:'11',
@@ -408,7 +408,7 @@ export const Products :ProductsProps[] = [
         rating:3,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Linda",
     },
     {
         id:'13',
@@ -442,7 +442,7 @@ export const Products :ProductsProps[] = [
         rating:5,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Bellani",
     },
     {
         id:'14',
@@ -510,6 +510,6 @@ export const Products :ProductsProps[] = [
         rating:3,
         itemsSold:43,
         quantity:0,
-        storeName:"LindaForshe",
+        storeName:"Waki",
     }
 ]

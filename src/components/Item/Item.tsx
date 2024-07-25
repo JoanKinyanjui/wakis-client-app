@@ -20,7 +20,7 @@ function Item({product}:ItemImagesProps) {
   const findItem = () =>{
     const chosenItem = Products.find((itm)=>itm.id === product);
     if(chosenItem){
-      console.log('=====>',chosenItem)
+      // console.log('=====>',chosenItem)
       setItem(chosenItem)
     }
     }
@@ -28,7 +28,7 @@ function Item({product}:ItemImagesProps) {
       findItem();
     },[]);
   
-  console.log('item ====>', item)
+  // console.log('item ====>', item)
   return (
   <>
   {item &&  

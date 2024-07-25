@@ -7,7 +7,7 @@ import ProductSpecifications from './ProductSpecifications'
 import { ColorOption, SizeOption } from './types'
 import Link from 'next/link'
 import { useAppDispatch } from '@/lib/hooks'
-import { decreaseQuantity, increaseQuantity } from '@/lib/features/cart/cartSlice'
+import { decreaseQuantity, increaseQuantity, removeFromCart } from '@/lib/features/cart/cartSlice'
 import { ProductsProps } from '@/Data/type'
 
 type itemProps ={
@@ -38,22 +38,12 @@ function ProductCard({item}:itemProps) {
   const dispatch = useAppDispatch();
 
   return (
-    <div className='w-full grid gap-2.5 md:gap-5 relative'>
-
-     <Link href='/stores/3'>
-     <div className='flex items-center justify-between'>
-       <div className='flex gap-2.5 items-center'>
-       <Icon icon='streamline:store-1-solid' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
-       <p className='normalXText capitalize'>{item.storeName}</p>
-       </div>
-        <Icon icon='simple-line-icons:arrow-right' className='w-[12px] h-[12px] md:w-[18px] md:h-[18px] text-black_101'/>
-      </div>
-      </Link>
+    <div className='w-full grid gap-2.5 md:gap-5 relative '>
       
       {/* Second row */}
 <div className='flex gap-5'>
 <div className='grid gap-2.5 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5'>
-<Image src='https://i.pinimg.com/474x/45/d0/ed/45d0edf2e824c3cf512c8acbee2abf80.jpg'  alt='' width={200} height={200} className='w-full h-[120px] sm:h-[140px] md:h-[150px]  rounded-[4px] shrink-0'/>
+<Image src={item.gallery[0].imageUrl}  alt='' width={200} height={200} className='w-full h-[120px] sm:h-[140px] md:h-[150px]  rounded-[4px] shrink-0'/>
 <div className='flex justify-between items-center'>
   <Buttons buttonText='-' className='bg-black_101 text-white_101 w-[35%] h-[25px]' onClick={()=>dispatch(decreaseQuantity(item))}/>
   <p className='normalXText text-black_101'>{item.quantity}</p>
@@ -73,9 +63,9 @@ function ProductCard({item}:itemProps) {
       <p className='text-black_101 !font-[500]'>Ksh {item.price}</p>
       <p className='text-grey_103 !font-[300] line-through'>Ksh {item.beforePrice}</p>
     </div>
-    <div className='absolute bottom-0 right-0 flex gap-5'>
+    <div className='absolute bottom-0 right-0 flex gap-5 cursor-pointer'>
     <Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'} className='w-[24px] h-[24px] md:w-[32px] md:h-[32px] !text-black_101' onClick={addToFavourite} />
-    <Icon icon='ic:outline-delete' className='w-[24px] h-[24px] md:w-[32px] md:h-[32px]'/>
+    <Icon icon='ic:outline-delete' className='w-[24px] h-[24px] md:w-[32px] md:h-[32px]' onClick={()=>dispatch(removeFromCart(item))}/>
     </div>
   </div>
   </div>
