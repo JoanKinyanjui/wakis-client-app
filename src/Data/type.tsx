@@ -1,3 +1,5 @@
+import { OrderProps } from "@/components/Account/types";
+
 export type imageProps = {
     id:number;
     url:string;
@@ -46,4 +48,18 @@ export type StoreProps = {
     itemsSold?:number;
     description?:string,
     imageUrl:string;
+}
+
+export type AccDetailsProps ={
+    name:string;
+    email:string;
+    password?:string;
+    postalCode:string;
+    city:string;
+    country:string;
+    orders:OrderProps[];
+    followedStores:string;
+    wishList:ProductsProps[];
+    emailPrefernce:string;
+
 }
