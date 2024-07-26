@@ -8,6 +8,7 @@ function RecentlyViewed() {
     {Products.slice(5,9).map((item)=>(
       <div key={item.id} className='w-full'>
       <ProductImage 
+       item={item}
        key={item.id}
        id={item.id}
        title= {item.title}
