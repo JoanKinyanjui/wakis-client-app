@@ -11,7 +11,7 @@ function OfficialStores() {
         <div className='w-full flex overflow-x-auto md:space-x-2 flex-shrink-0 no-scrollbar'>
       {Stores.map((item,index)=>(
         <div className='w-[45%] sm:w-[35%] md:w-1/4 flex-shrink-0'>
-       <StoreProfile id={item.id}  imageUrl={item.imageUrl} title={item.title} />
+       <StoreProfile  id={item.id}  imageUrl={item.imageUrl} title={item.title} />
         </div>
       ))}
       </div>
