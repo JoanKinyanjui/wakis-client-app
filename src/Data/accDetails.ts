@@ -1,4 +1,4 @@
-export const AccDetails = {
+export const AccDetails  = {
     name:"Joan Kinyanjui",
     email:"kinyanjuijoan52@gmail.com",
     password:"qwedftytrefv",

@@ -1,25 +1,23 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProductTags from '../commonComponents/ProductTags'
 import { ProductsProps } from '@/Data/type';
 import Image from 'next/image';
 import { ColorOption, SizeOption, sizeMeasureMents } from '../Cart/types';
 import Buttons from '../commonComponents/Buttons';
 import Icon from '../commonComponents/Icon';
-import { useAppDispatch } from '@/lib/hooks';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { addToCart } from '@/lib/features/cart/cartSlice';
+import { addToWishList, removeFromWishList } from '@/lib/features/wishlist/wishListSlice';
 
 interface ItemProps {
   item: ProductsProps;
 }
 
 function MoreInfo({item}:ItemProps) {
-  const [favourite,setFavourite] = useState(false);
-  const addToFavourite = () =>{
-  setFavourite(!favourite)
-  }
-  const [selectedSize,setSelectedSize] = useState<sizeMeasureMents | undefined>(undefined);
- const onSelectingSize = (sizeStr:string) =>{
+
+const [selectedSize,setSelectedSize] = useState<sizeMeasureMents | undefined>(undefined);
+const onSelectingSize = (sizeStr:string) =>{
 if(selectedSize?.size === sizeStr){
   setSelectedSize(undefined)
 }else{
@@ -58,8 +56,27 @@ if(selectedSize?.size === sizeStr){
   ];
 
   // AddToCart
+  const [favourite, setFavourite] = useState(false);
   const dispatch = useAppDispatch();
+  const wishListItems = useAppSelector((state) => state.wishList.items);
 
+  useEffect(() => {
+    const isFavourite = wishListItems.some((specs) => specs.id === item.id);
+    setFavourite(isFavourite);
+  }, [item]);
+
+
+const toggleFavourite = () => {
+  if (favourite) {
+    dispatch(removeFromWishList(item));
+    console.log('remove favourite');
+  } else {
+    dispatch(addToWishList(item));
+    console.log('add favourite');
+  }
+  setFavourite(!favourite);
+};
+  
   return (
   <>
   {item &&   
@@ -156,7 +173,7 @@ if(selectedSize?.size === sizeStr){
       {/* Add To Cart Button */}
       <div className='flex gap-5'>
 <Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2' onClick={()=>dispatch(addToCart(item))}/>
-<Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' onClick={addToFavourite}/>
+<Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' onClick={toggleFavourite}/>
 <Icon icon='ooui:share'  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' />
       </div>
      
