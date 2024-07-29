@@ -1,7 +1,10 @@
 import React from 'react'
 import AuthComponent from './AuthComponent'
 
-function Signup() {
+type ContentProps ={
+  changeContent:(x:boolean)=>void;
+}
+function Signup({changeContent}:ContentProps) {
   return (
     <div>
          <AuthComponent 
@@ -9,6 +12,7 @@ function Signup() {
        confirm={true}
        buttonText='Sign up'
        haveAcc={false}
+       changeContent={changeContent}
        />
     </div>
   )

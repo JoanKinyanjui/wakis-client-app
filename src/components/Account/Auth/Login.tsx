@@ -1,7 +1,11 @@
 import React from 'react'
-import AuthComponent from './AuthComponent'
+import AuthComponent from './AuthComponent';
 
-function Login() {
+type ContentProps ={
+  changeContent:(x:boolean)=>void;
+}
+
+function Login({changeContent}:ContentProps) {
   return (
     <div>
         <AuthComponent 
@@ -9,6 +13,7 @@ function Login() {
    confirm={false}
    buttonText='Login'
    haveAcc={true}
+   changeContent={changeContent}
    />
     </div>
   )

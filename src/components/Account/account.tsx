@@ -12,6 +12,7 @@ import Logout from './Contents/Logout'
 import Modal from '@mui/material/Modal';
 import Login from './Auth/Login';
 import { Box } from '@mui/material'
+import Signup from './Auth/Signup'
 
 const style = {
       position: 'absolute' as 'absolute',
@@ -27,7 +28,6 @@ const style = {
 
 function Account() {
   const [activeContent,setActiveContent] = useState<number>(1);
-  console.log(activeContent);
 
   const selectActiveMenu = (id:number)=>{
   setActiveContent(id);
@@ -40,6 +40,12 @@ function Account() {
   useEffect(()=>{
       handleOpen();
   },[])
+
+// auth ...
+const [isLogin,setIsLogin] = useState<boolean>(true);
+const setLoginTrue =(x:boolean)=>{
+      setIsLogin(x)
+}
 
   return (
    <CardWrapper customClass='mb-10'>
@@ -78,7 +84,12 @@ function Account() {
     onClose={handleClose}
     >
        <Box sx={style}>
-            <Login />
+           {isLogin 
+      ?
+            <Login changeContent={setLoginTrue}/>
+      :
+            <Signup changeContent={setLoginTrue}/>
+      }
        </Box>
     </Modal>
    </CardWrapper>

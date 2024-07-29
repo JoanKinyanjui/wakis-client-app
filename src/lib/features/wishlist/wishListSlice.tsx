@@ -23,6 +23,8 @@ const wishListSlice = createSlice({
         if(!existingItem){
             state.items.push(action.payload);
             state.quantity += 1;
+        }else{
+            return;
         }
 
         },

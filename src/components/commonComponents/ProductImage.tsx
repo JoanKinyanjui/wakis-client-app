@@ -26,7 +26,7 @@ function ProductImage({item,id,title,price,beforePrice,discount,rating,itemsSold
   }
 
   return (
-    <div onClick={()=>moveToProductPage(id)} className=' px-1 pb-1 grid mt-[4px] gap-[2px] md:gap-1 w-full  rounded-[8px] shadow-lg hover:scale-105'>
+    <div onClick={()=>moveToProductPage(id)} className=' px-1 pb-1 grid mt-[4px] gap-[2px] md:gap-1 w-full  rounded-[8px] shadow-lg hover:scale-105 cursor-pointer'>
     <div className={` ${isHomeRoute ? 'h-[120px] md:h-[180px] xl:h-[200px] ' :'h-[180px] md:h-[200px] xl:h-[220px] '} w-full rounded-[4px] overflow-hidden relative`}>
         <Image src={imageUrl} className='w-full h-full' layout='fill' alt='product' />
        {discount && (

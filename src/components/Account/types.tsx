@@ -14,4 +14,5 @@ export type AuthComponentProps ={
     confirm:boolean;
     buttonText:string;
     haveAcc:boolean;
+    changeContent:(x:boolean)=>void;
 }

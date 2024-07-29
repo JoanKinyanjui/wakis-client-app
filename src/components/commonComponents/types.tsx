@@ -1,10 +1,11 @@
 import { ProductsProps } from "@/Data/type";
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 export type ButtonProps = {
     buttonText?: string;
     className?:string;
     rounded?:boolean;
+    type?: 'button' | 'submit' | 'reset';
     onClick?:()=>void;
 }
 
