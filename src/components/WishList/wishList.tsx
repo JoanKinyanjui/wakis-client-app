@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import CardWrapper from '../commonComponents/CardWrapper'
 import Image from 'next/image'
@@ -8,15 +9,15 @@ import CategoryHeader from '../commonComponents/CategoryHeader'
 import { useAppSelector } from '@/lib/hooks'
 
 function WishList() {
-  const wishListItems = useAppSelector((state)=>state.wishList.items);
+  const wishListItems = useAppSelector(state=>state.wishList);
 
   return (
     <div>
      <CardWrapper>
      <CategoryHeader headingLeft='WISHLIST'   />
     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
-   {(wishListItems.length >0) ? 
-   wishListItems.map((item)=>(
+   {(wishListItems.items.length >0) ? 
+   wishListItems.items.map((item)=>(
     <div className='flex w-full justify-between border-[1px] border-grey_102 px-2 md:px-5 py-2 rounded-md my-1 md:my-2 lg:my-3 gap-2.5 md:gap-5'>
     <div className=' flex gap-5 items-start'>
       <Image alt='' src={item.gallery[0].imageUrl} width={100} height={80} className='rounded-sm w-[70px] h-[90px] md:w-[100px] md:h-[110px]'/>
