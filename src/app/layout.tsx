@@ -1,3 +1,4 @@
+"use client"
 import type { Metadata } from "next";
 import { Inter, Crimson_Text  } from "next/font/google";
 import "./globals.css";
@@ -7,13 +8,15 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import Footer from "@/components/Footer";
 import StoreProvider from "./StoreProvider";
+// Swypt ...
+import { CryptoProvider } from "swypt-checkout";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "WAKI",
-  description: "Online Fashion Store",
-};
+// export const metadata: Metadata = {
+//   title: "WAKI",
+//   description: "Online Fashion Store",
+// };
 
 export default function RootLayout({
   children,
@@ -21,6 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <CryptoProvider>
     <html lang="en">
    <StoreProvider>
    <body className={inter.className}>
@@ -35,5 +39,6 @@ export default function RootLayout({
         </body>
    </StoreProvider>
     </html>
+     </CryptoProvider>
   );
 }

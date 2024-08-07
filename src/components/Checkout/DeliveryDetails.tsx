@@ -4,11 +4,11 @@ import CheckoutWrapper from './CheckoutWrapper'
 import { Radio } from '@mui/material'
 
 function DeliveryDetails() {
-  const [selectedValue,setSelectedValue] = useState<String | null>(null);
+  const [selectedValue,setSelectedValue] = useState<String>("option1");
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
-    setSelectedValue((prevValue) => (prevValue === newValue ? null : newValue));
+    setSelectedValue(newValue);
   };
   return (
     <div>

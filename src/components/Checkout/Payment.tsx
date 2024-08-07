@@ -1,14 +1,18 @@
 "use client"
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import CheckoutWrapper from './CheckoutWrapper'
 import { Radio } from '@mui/material'
 
-function Payment() {
-  const [selectedValue,setSelectedValue] = useState<String | null>(null);
+type paymentValueProps = {
+  selectedPaymentValue: string;
+  setSelectedPaymentValue: Dispatch<SetStateAction<string>>
+}
+
+function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProps){
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
-    setSelectedValue((prevValue) => (prevValue === newValue ? null : newValue));
+    setSelectedPaymentValue(newValue);
   };
 
   return (
@@ -17,7 +21,7 @@ function Payment() {
     <div className='normalText text-grey_104 grid gap-5 py-2.5 md:py-5'>
       <div className='flex gap-2.5 md:gap-5'>
       <Radio   
-      checked={selectedValue === 'option1'}
+      checked={selectedPaymentValue === 'option1'}
       onChange={handleRadioChange}
       value="option1"
       name="radio-button-demo"
@@ -39,7 +43,7 @@ function Payment() {
 
       <div className='flex gap-2.5 md:gap-5'>
       <Radio   
-      checked={selectedValue === 'option2'}
+      checked={selectedPaymentValue === 'option2'}
       onChange={handleRadioChange}
       value="option2"
       name="radio-button-demo"
@@ -61,7 +65,7 @@ function Payment() {
 
       <div className='flex gap-2.5 md:gap-5'>
       <Radio
-      checked={selectedValue === 'option3'}
+      checked={selectedPaymentValue === 'option3'}
       onChange={handleRadioChange}
       value="option3"
       name="radio-button-demo"   

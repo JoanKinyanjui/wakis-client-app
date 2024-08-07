@@ -4,7 +4,7 @@ import CardWrapper from '../commonComponents/CardWrapper'
 
 function Checkout() {
   return (
-    <CardWrapper>
+    <CardWrapper >
  <StepperComponent />
     </CardWrapper>
   )

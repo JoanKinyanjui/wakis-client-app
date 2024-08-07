@@ -23,7 +23,7 @@ function AuthComponent({title,confirm,buttonText,haveAcc,changeContent}:AuthComp
   }
 
   return (
-    <div className='w-[300px] xs:w-[400px] md:w-[500px]  mx-auto bg-purple_01/10 rounded-[20px] md:rounded-[20px] p-5 md:p-8'>
+    <div className=''>
   
   <div className='w-full flex justify-center pb-2.5 md:pb-5'>
   <p className={crimsonText.className} style={{fontWeight:700}}>{title}</p>

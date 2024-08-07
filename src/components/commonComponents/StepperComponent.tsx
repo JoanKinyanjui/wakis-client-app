@@ -13,6 +13,11 @@ import Buttons from './Buttons';
 import CustomerAddress from '../Checkout/CustomerAddress';
 import DeliveryDetails from '../Checkout/DeliveryDetails';
 import Payment from '../Checkout/Payment';
+import { CheckoutModal } from "swypt-checkout";
+import "swypt-checkout/dist/styles.css";
+import ModalComponent from './ModalComponent';
+import MpesaPaymentModal from '../Checkout/MpesaPaymentModal';
+import BankPayment from '../Checkout/BankPayment';
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
@@ -87,9 +92,24 @@ const steps = ['Customer Address', 'Delivery Address', 'Payment Method'];
 
 export default function StepperComponent() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [selectedPaymentValue,setSelectedPaymentValue] = React.useState<string>("option1");
+  const [open,setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleNext = () => {
+   if(activeStep === 2){
+    if(selectedPaymentValue === "option1"){
+       handleOpen();
+    }else if(selectedPaymentValue === "option2"){
+       handleOpen();
+    }else {
+      openSwyptCheckout();
+    }
+    
+   }else{
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+   }
   };
 
   const handleBack = () => {
@@ -103,11 +123,16 @@ export default function StepperComponent() {
       case 1:
         return <DeliveryDetails />;
       case 2:
-        return <Payment />;
+        return <Payment selectedPaymentValue={selectedPaymentValue}  setSelectedPaymentValue={setSelectedPaymentValue} />;
       default:
         return <div>Unknown Step</div>;
     }
   };
+
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const openSwyptCheckout = ()=>{
+     setIsModalOpen(true)
+  }
 
   return (
     <Stack sx={{ width: '100%'}} spacing={4}>
@@ -124,14 +149,35 @@ export default function StepperComponent() {
         <Buttons
         buttonText='Back'
         onClick={activeStep===0 ? undefined : handleBack}
-        className={activeStep === 0 ? 'text-grey_102 px-5 md:px-8' :'text-purple_01 px-5 md:px-8'}
+        className={activeStep === 0 ? 'text-grey_102 px-5 md:px-8' :'text-purple_01 px-5 md:px-8 w-full'}
         /> 
         <Buttons
         buttonText={activeStep === steps.length - 1 ? 'Confirm' : 'Next'}
-        onClick={activeStep === steps.length - 1 ? undefined : handleNext}
-        className='bg-black_101 text-white_101 px-5 md:px-8'
+        onClick={handleNext}
+        className='bg-black_101 text-white_101 px-5 md:px-8 w-full'
         />         
       </div>
+     <div className='z-[1000]'>
+     <CheckoutModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      headerBackgroundColor="#2A0540" 
+      businessName="Waki"
+      merchantName="Waki"
+      merchantAddress="0x6d19a24D93379D1bA58d28884fFBBEf1bc145387" 
+    />
+     </div>
+     <div>
+      <ModalComponent   open={open} handleClose={handleClose}>
+<div>
+  {selectedPaymentValue && selectedPaymentValue === "option1" ? 
+  <MpesaPaymentModal />
+:
+  <BankPayment />
+}
+</div>
+      </ModalComponent>
+     </div>
     </Stack>
   );
 }
