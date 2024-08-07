@@ -18,7 +18,7 @@ function MpesaPaymentModal() {
         console.log("==>", data);
   }
   return (
-    <div className='mx-auto w-full md:px-5]'>
+    <div className='mx-auto  md:w-full md:px-5]'>
      <form onSubmit={handleSubmit(onSubmit)} className='grid gap-5'>
      <div className=' grid gap-[2px] md:gap-2.5'>
   <label className={`normalText !font-[500] ${crimsonText.className} `}>Phone Number</label>

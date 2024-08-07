@@ -31,7 +31,7 @@ const CardInputField = () => {
     height: "18px",
     borderRadius: "50%",
     border: isChecked ? '#9A9A9B' : "1px solid #D9D9D9",
-    backgroundColor: isChecked ? "#860ECF" : "#9A9A9B",
+    backgroundColor: isChecked ? "#860ECF" : "transparent",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -202,7 +202,7 @@ const CardInputField = () => {
         <div style={checkboxStyle} onClick={handleCheckboxChange}>
           <span style={tickIconStyle}>✓</span>
         </div>
-        <p className="font14R text-black_101">
+        <p className="normalText  text-black_101">
           Save card <span className="font10R text-GRAY_101">(optional)</span>
         </p>
       </div>

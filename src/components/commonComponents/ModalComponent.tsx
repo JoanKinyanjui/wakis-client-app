@@ -29,7 +29,7 @@ function ModalComponent({children ,open, handleClose}:modalProps) {
     onClose={handleClose}
     >
 <Box sx={style}>
-    <div className='w-[300px] xs:w-[400px] md:w-[500px]  mx-auto bg-grey_102 rounded-[20px] md:rounded-[20px] p-5 md:p-8'>
+    <div className='w-[280px] xs:w-[320px] sm:w-[400px] md:w-[500px]  mx-auto bg-grey_102 rounded-[20px] md:rounded-[20px] p-5 md:p-8'>
         {children}
     </div>
 </Box>
