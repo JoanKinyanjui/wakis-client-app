@@ -135,7 +135,7 @@ export default function StepperComponent() {
   }
 
   return (
-    <Stack sx={{ width: '100%'}} spacing={4}>
+    <Stack sx={{ width: '100%',paddingTop:'20px'}} spacing={4}>
       <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map((label, index) => (
           <Step key={label}>
