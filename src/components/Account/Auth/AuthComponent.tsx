@@ -79,7 +79,7 @@ function AuthComponent({title,confirm,buttonText,haveAcc,changeContent}:AuthComp
   <div className='flex items-center'>
     <Radio 
      sx={{
-      color: '#D9D9D9',
+      color: '#757575',
       '&.Mui-checked': {
         color: '#860ECF',
       },
@@ -119,9 +119,9 @@ function AuthComponent({title,confirm,buttonText,haveAcc,changeContent}:AuthComp
  <Buttons buttonText={buttonText} className='bg-black_101 text-white_101 md:py-3' type='submit'/>
 
 <div className='flex gap-1 md:pt-5 items-center'>
-  <div className='h-[1px] bg-grey_102 w-full'></div>
+  <div className='h-[1px] bg-grey_104 w-full'></div>
   <p className='flex smallText whitespace-nowrap'>Or continue with</p>
-  <div className='w-full h-[1px] bg-grey_102'></div>
+  <div className='w-full h-[1px] bg-grey_104'></div>
 </div> 
 
 <div className='flex justify-center'>

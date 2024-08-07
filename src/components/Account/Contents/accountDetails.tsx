@@ -13,7 +13,7 @@ function AccountDetails() {
 
   return (
    <>   
-    <div className='grid gap-5 md:gap-6 md:flex md:items-start  text-grey_104'>
+    <div className='grid gap-5 md:gap-6 md:flex md:items-start  text-grey_104 !no-underline'>
     {editAccDetails ?
     <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
    <div className='flex justify-between items-center'>
