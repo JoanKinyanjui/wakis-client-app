@@ -46,19 +46,19 @@ function OneCardInput({label,icon,iconString,placeholder, type,value,setValue}:C
             },
             '& .MuiOutlinedInput-root': { 
               '& fieldset': {
-                borderColor: '#44444F', 
+                borderColor: '#860ECF80', 
                 borderWidth: '1px !important',
                 borderRadius: '5px !important',
               
               },
               '&:hover fieldset': {
-                borderColor: '#44444F',  
+                borderColor: '#860ECF80',  
                 borderWidth: '1px !important',
                 borderRadius: '5px !important',
                
               },
               '&.Mui-focused fieldset': { 
-                borderColor: '#44444F',
+                borderColor: '#860ECF80',
                 borderWidth: '1px !important',
                 borderRadius: '5px !important',
                

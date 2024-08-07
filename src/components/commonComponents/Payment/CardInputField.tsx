@@ -30,7 +30,7 @@ const CardInputField = () => {
     width: "18px",
     height: "18px",
     borderRadius: "50%",
-    border: isChecked ? '#9A9A9B' : "1px solid #D9D9D9",
+    border: isChecked ? 'none' : "1px solid #757575",
     backgroundColor: isChecked ? "#860ECF" : "transparent",
     display: "flex",
     justifyContent: "center",
@@ -124,15 +124,15 @@ const CardInputField = () => {
                     },
                     "& .MuiOutlinedInput-root": {
                       "& fieldset": {
-                        borderColor: "#44444F",
+                        borderColor: "#860ECF80",
                         borderWidth: "1px !important",
                         borderRadius: "5px !important",
                       },
                       "&:hover fieldset": {
-                        borderColor: "#44444F",
+                        borderColor: "#860ECF80",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#44444F",
+                        borderColor: "#860ECF80",
                       },
                     },
                     "& input": {

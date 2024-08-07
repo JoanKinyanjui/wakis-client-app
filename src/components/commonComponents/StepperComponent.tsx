@@ -148,7 +148,7 @@ export default function StepperComponent() {
 
         <Buttons
         buttonText='Back'
-        onClick={activeStep===0 ? undefined : handleBack}
+        onClick={activeStep=== 0 ? undefined : handleBack}
         className={activeStep === 0 ? 'text-grey_102 px-5 md:px-8' :'text-purple_01 px-5 md:px-8 w-full'}
         /> 
         <Buttons

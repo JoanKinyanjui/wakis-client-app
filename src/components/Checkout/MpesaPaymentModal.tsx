@@ -33,8 +33,8 @@ function MpesaPaymentModal() {
         }
     })}
     type='number'
-    placeholder='+2547 XX XXX XXX' 
-    className='bg-transparent text-[13px] md:text-[15px] text-grey_104 focus:outline-none'
+    placeholder='+2547 XX  XXX  XXX' 
+    className='bg-transparent text-[13px] md:text-[15px] text-grey_104 focus:outline-none py-1'
     />
   </div>
   <p className='smallText'>{errors && errors.phoneNumber?.message}</p>
