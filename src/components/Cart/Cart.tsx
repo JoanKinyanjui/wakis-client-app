@@ -74,7 +74,7 @@ function Cart() {
           <div>
             <Buttons
               onClick={() => router.push('/checkout')}
-              className='bg-black_101 text-white_101 py-3'
+              className='bg-black_101 text-white_101 py-3 w-full'
               buttonText={`CHECKOUT ( KSH ${total} )`}
             />
           </div>
