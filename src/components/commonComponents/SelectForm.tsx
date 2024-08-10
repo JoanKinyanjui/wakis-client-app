@@ -20,11 +20,11 @@ const MenuProps = {
 
 
 
-export default function SelectForm({data , label}:specificOptionsArrayProps) {
-  const [age, setAge] = React.useState('');
+export default function SelectForm({data ,label, value}:specificOptionsArrayProps) {
+  const [specs, setSpecs] = React.useState(value);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
+    setSpecs(event.target.value);
   };
 
   return (
@@ -63,7 +63,7 @@ export default function SelectForm({data , label}:specificOptionsArrayProps) {
       <Select
         labelId="demo-select-small-label"
         id="demo-select-small"
-        value={age}
+        value={specs}
         label="Age"
         onChange={handleChange}
         MenuProps={MenuProps}

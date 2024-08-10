@@ -20,10 +20,13 @@ export type ColorOption = {
   }
   export type specificOptionsArrayProps = {
     data: specificOptionsProps[];
-    label:string
+    label:string;
+    value:string;
   }
   
   export type ProductOptionsProps = {
     colors: ColorOption[];
     sizes: SizeOption[];
+    colorValue:string;
+    sizeValue:string;
   };

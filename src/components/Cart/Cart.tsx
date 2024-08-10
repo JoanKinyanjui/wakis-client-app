@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import CardWrapper from '../commonComponents/CardWrapper';
 import ProductCard from './ProductCard';
 import Buttons from '../commonComponents/Buttons';
@@ -12,6 +12,10 @@ import Link from 'next/link';
 function Cart() {
   const router = useRouter();
   const { cartItems, total } = useAppSelector((state) => state.cart);
+  
+ useEffect(()=>{
+  console.log(cartItems)
+ },[]);
 
   // Function to group cart items by store
   const groupCartItemsByStore = (cartItems: ProductsProps[]) => {

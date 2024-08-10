@@ -25,6 +25,14 @@ type productGallery = {
    imageUrl:string;
    description:string;
 }
+type colorOptions ={
+    name:string,
+    value:string,
+}
+type sizeOptions ={
+    name:string,
+    value:string,
+}
 export type ProductsProps = {
     id:string;
     title?:string;
@@ -38,6 +46,8 @@ export type ProductsProps = {
     gallery:productGallery[];
     quantity:number;
     storeName:string;
+    color:string;
+    size:string;
 }
 export type StoreProps = {
     id:string;

@@ -9,6 +9,7 @@ import Icon from '../commonComponents/Icon';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { addToCart } from '@/lib/features/cart/cartSlice';
 import { addToWishList, removeFromWishList } from '@/lib/features/wishlist/wishListSlice';
+import { toast, ToastContainer } from 'react-toastify';
 
 interface ItemProps {
   item: ProductsProps;
@@ -16,10 +17,10 @@ interface ItemProps {
 
 function MoreInfo({item}:ItemProps) {
 
-const [selectedSize,setSelectedSize] = useState<sizeMeasureMents | undefined>(undefined);
+const [selectedSize,setSelectedSize] = useState<sizeMeasureMents | null>(null);
 const onSelectingSize = (sizeStr:string) =>{
 if(selectedSize?.size === sizeStr){
-  setSelectedSize(undefined)
+  setSelectedSize(null)
 }else{
   const  sizeSpecs = sizes.find((size)=>size.size === sizeStr);
   console.log(sizeSpecs);
@@ -29,16 +30,17 @@ if(selectedSize?.size === sizeStr){
 }
  }
 
- const [selectedColor,setSelectedColor] = useState<string>('');
+ const [selectedColor,setSelectedColor] = useState<string | null>(null);
  const onSelectColor =(strColor:string)=>{
       setSelectedColor(strColor)
  }
   const rating = item?.rating ?? 0;
   const colorOptions :ColorOption[] = [
     { name: 'Red', value: 'red' },
-    { name: 'Green', value: 'pink' },
+    { name: 'Green', value: 'green' },
     { name: 'Blue', value: 'blue' },
-    { name: 'Yellow', value: 'brown' },
+    { name: 'Yellow', value: 'yellow' },
+    { name: 'Brown', value: 'brown' },
   ];
 
   const sizeOptions : SizeOption[] = [
@@ -76,6 +78,25 @@ const toggleFavourite = () => {
   }
   setFavourite(!favourite);
 };
+
+const handleAddToCart = (item:ProductsProps)=>{
+  console.log('just clicked')
+  if(!selectedSize && !selectedColor){
+    toast.error('Please choose size and color')
+  }else if(!selectedSize){
+    toast.error("Please choose size")
+  }else if(!selectedColor){
+    toast.error("Please choose color")
+  }else{
+    const itemWithSelection = {
+      ...item,
+      size: selectedSize.size,
+      color: selectedColor,
+    };
+    dispatch(addToCart(itemWithSelection));
+  }
+
+}
   
   return (
   <>
@@ -134,7 +155,7 @@ const toggleFavourite = () => {
       {/* color specs */}
       <div className='flex gap-2.5 md:gap-5'>
         {colorOptions.map((color,index)=>(
-          <div key={index} onClick={()=>onSelectColor(color.value)} className={`w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] rounded-full ${selectedColor ===color.value ? 'border-[3px] border-black_101' :''}` }  style={{ backgroundColor: color.value }}></div>
+          <div key={index} onClick={()=>onSelectColor(color.name)} className={`w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] rounded-full ${selectedColor === color.name ? 'border-[3px] border-black_101' :''}` }  style={{ backgroundColor: color.value }}></div>
         ))}
 
       </div>
@@ -172,11 +193,10 @@ const toggleFavourite = () => {
 
       {/* Add To Cart Button */}
       <div className='flex gap-5'>
-<Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2' onClick={()=>dispatch(addToCart(item))}/>
+<Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2' onClick={()=>handleAddToCart(item)}/>
 <Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' onClick={toggleFavourite}/>
 <Icon icon='ooui:share'  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' />
       </div>
-     
     </div>
     }
   </>

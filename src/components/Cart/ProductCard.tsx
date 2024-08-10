@@ -25,6 +25,7 @@ function ProductCard({item}:itemProps) {
     { name: 'Green', value: 'green' },
     { name: 'Blue', value: 'blue' },
     { name: 'Yellow', value: 'yellow' },
+    { name: 'Brown', value: 'brown' },
   ];
 
   const sizeOptions : SizeOption[] = [
@@ -57,7 +58,7 @@ function ProductCard({item}:itemProps) {
    <p className='smallText !font-[400] text-grey_104'>{item.desscription}</p>
    </div>
     <div>
-      <ProductSpecifications colors={colorOptions} sizes={sizeOptions}/>
+      <ProductSpecifications colors={colorOptions} sizes={sizeOptions} colorValue={item.color} sizeValue={item.size}/>
     </div>
     <div className='normalText flex gap-5 md:gap-10 w-full justify-between '>
       <p className='text-black_101 !font-[500]'>Ksh {item.price}</p>

@@ -10,6 +10,8 @@ import Footer from "@/components/Footer";
 import StoreProvider from "./StoreProvider";
 // Swypt ...
 import { CryptoProvider } from "swypt-checkout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +33,7 @@ export default function RootLayout({
        <div className="bg-white_101 sticky top-0 w-full z-[1000]">
        <NavBar />
        <TopBar />
+       <ToastContainer />
        </div>
          <Suspense fallback={<Loading />}>
          {children}
