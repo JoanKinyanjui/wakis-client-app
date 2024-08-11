@@ -9,10 +9,6 @@ const initialState:cartProps = {
     total:0,
 }
 
-interface CartItem extends ProductsProps {
-  size?: string;
-  color?: string;
-}
 
 const cartSlice = createSlice({
     name:'cart',
