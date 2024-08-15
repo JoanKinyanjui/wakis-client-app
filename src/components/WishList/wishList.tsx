@@ -24,14 +24,14 @@ function WishList() {
    {(wishListItems.items.length >0) ? 
    wishListItems.items.map((item)=>(
    <Link href={`item/${item.id}`}>
-    <div className='flex w-full justify-between border-[1px] border-grey_102 px-2 md:px-5 py-2 rounded-md my-1 md:my-2 lg:my-3 gap-2.5 md:gap-5'>
+    <div className='flex w-full justify-between border-[1px] border-grey_102 dark:border-grey_104 px-2 md:px-5 py-2 rounded-md my-1 md:my-2 lg:my-3 gap-2.5 md:gap-5'>
     <div className=' flex gap-5 items-start'>
       <Image alt='' src={item.gallery[0].imageUrl} width={100} height={80} className='rounded-sm w-[70px] h-[90px] md:w-[100px] md:h-[110px]'/>
 
     <div className='grid gap-1'>
-    <p className='text-black_101 normalText capitalize !font-[500]'>{item.title}</p>
+    <p className='text-black_101 dark:text-grey_102 normalText capitalize !font-[500]'>{item.title}</p>
     <p className='smallText text-grey_104'>{item.desscription}</p>
-    <p className='normalText text-black_101 !font-[500]'>Ksh {item.price}</p>
+    <p className='normalText text-black_101 dark:text-grey_102 !font-[500]'>Ksh {item.price}</p>
     {((Number(item.id) % 2 === 0 ?  <p className='smallText flex justify-center w-[max-content] bg-grey_102 px-4 md:px-6 py-2 rounded-md text-grey_104'> OUT OF STOCK   </p> : null))}
     </div>
     </div>

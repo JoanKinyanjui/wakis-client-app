@@ -9,17 +9,17 @@ function OneOrder({orderId, title,imageUrl,status}:OrderProps) {
         <Image alt='' src={imageUrl} width={100} height={80} className='rounded-sm w-[70px] h-[90px] md:w-[100px] md:h-[110px]'/>
 
       <div className='grid gap-1'>
-      <p className='text-grey_103 uppercase normalText'>{orderId}</p>
-      <p className='normalText text-black_101'>{title}</p>
+      <p className='text-grey_103 dark:text-grey_104 uppercase normalText'>{orderId}</p>
+      <p className='normalText text-black_101 dark:text-grey_102'>{title}</p>
       <div className={`${status === 'processing' ? 'bg-[blue]/70' : status === 'delivered' ? 'bg-[green]/70': 'bg-[red]/70'} smallText flex justify-center items-center text-white_101 px-4 rounded-sm py-1 capitalize h-[max-content] w-[max-content]`} >
         {status}
       </div>
-      <p className='smallText text-black_101'>01-08-2023</p>
+      <p className='smallText text-black_101 dark:text-grey_102'>01-08-2023</p>
       </div>
       </div>
 
       <div>
-<p className='smallText py-[1px]  text-black_101'>SEE DETAILS</p>
+<p className='smallText py-[1px]  text-black_101 dark:text-grey_102'>SEE DETAILS</p>
       </div>
     </div>
   )

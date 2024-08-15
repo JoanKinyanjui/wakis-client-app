@@ -17,7 +17,7 @@ function AccountDetails() {
     {editAccDetails ?
     <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
    <div className='flex justify-between items-center'>
-   <p className='normalXText text-black_101'>Account Details</p>
+   <p className='normalXText text-black_101 dark:text-grey_102'>Account Details</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full'></div>
     <input className='border-[1px] border-grey_102 rounded-sm my-1 px-2 py-[2px]' value={userName}/>
@@ -28,7 +28,7 @@ function AccountDetails() {
     :
     <div className='text-start  w-full grid gap-1 px-2 py-2.5 cursor-pointer'>
      <div className='flex justify-between items-center'>
-     <p className='normalXText text-black_101'>Account Details</p>
+     <p className='normalXText text-black_101 dark:text-grey_102'>Account Details</p>
      <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccDetails(true)}>Edit</p>
      </div>
       <div className='h-[1px] bg-grey_103 w-full smallText'></div>
@@ -40,7 +40,7 @@ function AccountDetails() {
 {editAccAddress ? 
   <div className='text-start  w-full grid gap-1 px-2 py-2.5'>
   <div className='flex justify-between items-center'>
-   <p className='normalXText text-black_101'>Address Details</p>
+   <p className='normalXText text-black_101 dark:text-grey_102'>Address Details</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full'></div>
     <input className='border-[1px] border-grey_102 rounded-sm my-1 px-2 py-[2px]' value={address}/>
@@ -52,7 +52,7 @@ function AccountDetails() {
   :
   <div className='text-start  w-full grid gap-1 px-2 py-2.5 cursor-pointer'>
   <div className='flex justify-between items-center'>
-   <p className='normalXText text-black_101'>Address Details</p>
+   <p className='normalXText text-black_101 dark:text-grey_102'>Address Details</p>
    <p className='text-purple_01 normalText  !font-[600]' onClick={()=>setEditAccAddress(true)}>Edit</p>
    </div>
     <div className='h-[1px] bg-grey_103 w-full smallText'></div>

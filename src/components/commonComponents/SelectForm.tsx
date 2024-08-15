@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { specificOptionsArrayProps } from '../Cart/types';
+import useTheme from '@/hooks/useTheme';
 
 
 const ITEM_HEIGHT = 48;
@@ -27,6 +28,8 @@ export default function SelectForm({data ,label, value}:specificOptionsArrayProp
     setSpecs(event.target.value);
   };
 
+  const {isDarkMode} = useTheme();
+
   return (
     <FormControl 
     size="small" 
@@ -34,20 +37,30 @@ export default function SelectForm({data ,label, value}:specificOptionsArrayProp
     fullWidth
     sx={{
       '& .MuiOutlinedInput-root':{
-       height:"32px",
+        height: "32px",
+        borderColor: isDarkMode ? '#D9D9D9' : 'black',
+        color: isDarkMode ? '#D9D9D9' : 'black',
+      '& .MuiOutlinedInput-notchedOutline': {
+          borderColor: isDarkMode ? '#D9D9D9' : '#860ECF',
+        },
       },
       '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-        borderColor: '#860ECF',
+        borderColor: isDarkMode ? '#D9D9D9' :  '#860ECF',
       },
-      '& .MuiInputLabel-root':{
-          fontSize: '12px',
+      '& .MuiInputLabel-root': {
+        fontSize: '12px',
+        color: isDarkMode ? '#D9D9D9' : 'black',
+        '&.Mui-focused': {
+          color: isDarkMode ? '#D9D9D9' : '#860ECF',
         },
+      },
         '& .MuiMenuItem-root': {
           display: 'flex',
           alignItems: 'center',
+          borderColor: isDarkMode ? '#D9D9D9' : 'black',
         },
         '& .MuiInputBase-input':{
-          color: 'grey',
+          color: isDarkMode ? '#D9D9D9' : 'black',
           fontSize: '12px',
         }
   }}

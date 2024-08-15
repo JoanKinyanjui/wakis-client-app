@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
   backgroundColor: white !important;
-}
+} */
 .icon{
   color: #9A9A9B;
   width: 16px;

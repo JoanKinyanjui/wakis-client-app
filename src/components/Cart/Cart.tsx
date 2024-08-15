@@ -44,10 +44,10 @@ function Cart() {
                  <Link href='/stores/3'>
      <div className='flex items-center justify-between'>
        <div className='flex gap-2.5 items-center'>
-       <Icon icon='streamline:store-1-solid' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px]'/>
-       <p className='normalXText capitalize'>{storeName}</p>
+       <Icon icon='streamline:store-1-solid' className='w-[18px] h-[18px] md:w-[24px] md:h-[24px] dark:text-white_101'/>
+       <p className='normalXText capitalize dark:text-white_101'>{storeName}</p>
        </div>
-        <Icon icon='simple-line-icons:arrow-right' className='w-[12px] h-[12px] md:w-[18px] md:h-[18px] text-black_101'/>
+        <Icon icon='simple-line-icons:arrow-right' className='w-[12px] h-[12px] md:w-[18px] md:h-[18px] text-black_101 dark:text-grey_102'/>
       </div>
       </Link>
                 {groupedItems[storeName].map((item) => (
@@ -67,18 +67,18 @@ function Cart() {
           )}
         </div>
 
-        <div className='w-full md:w-[35%] grid gap-2.5 md:gap-5 px-5 py-5 bg-grey_101/20 shadow-md'>
+        <div className='w-full md:w-[35%] grid gap-2.5 md:gap-5 px-5 py-5 bg-grey_101/20 dark:bg-black_101 shadow-md'>
           <div>
-            <p className='subTitle text-black_101'>Cart Summary</p>
+            <p className='subTitle text-black_101 dark:text-grey_102'>Cart Summary</p>
           </div>
           <div className='flex justify-between normalXText w-full'>
             <p className='text-grey_104'>SubTotal</p>
-            <p>Ksh {total}</p>
+            <p className='text-black_101 dark:text-grey_102'>Ksh {total}</p>
           </div>
           <div>
             <Buttons
               onClick={() => router.push('/checkout')}
-              className='bg-black_101 text-white_101 py-3 w-full'
+              className='bg-black_101 dark:bg-purple_02 text-white_101 py-3 w-full'
               buttonText={`CHECKOUT ( KSH ${total} )`}
             />
           </div>

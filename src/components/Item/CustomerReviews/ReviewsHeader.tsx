@@ -82,7 +82,7 @@ function ReviewsHeader({allReviews,imagesOnly,onSelectATab,sortByLatest,sortByHi
   return (
     <div className=''>
       <div className='flex justify-between'>
-        <div className='flex gap-5 md:gap-10 normalXText'>
+        <div className='flex gap-5 md:gap-10 normalXText text-black_101 dark:text-grey_102'>
             <div onClick={()=>onSelectATab('1')} className={`py-[2px] md:py-1 ${allReviews ? 'border-b-[2px] md:border-b-[3px]  border-purple_01' : 'border-none'}`}>All Reviews</div>
             <div onClick={()=>onSelectATab('2')} className={`py-[2px] md:py-1  ${imagesOnly ? 'border-b-[2px] md:border-b-[3px]  border-purple_01' : 'border-none'}`}>All Images</div>
         </div>

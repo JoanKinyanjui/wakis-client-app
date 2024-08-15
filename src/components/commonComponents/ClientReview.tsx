@@ -44,6 +44,8 @@ function ClientReview({sortedReviews,setSortedReviews}:sortedReviewProps) {
       <div className='flex  md:gap-5 w-full justify-between md:justify-center md:w-1/2 '>
 
      <div className='grid justify-start gap-2.5 md:gap-5 w-[65%] xs:w-[70%] md:w-full place-content-center'>
+     <div className='grid gap-1 md:gap-2 place-content-center'>
+      <p className='text-[12px] md:text-[14px] font-[600] text-black_101 dark:text-grey_102'>29 Aug , 2023</p>
       <div className='flex gap-1 md:gap-2'>
       {[...Array(5)].map((_, index) => (
         <Image
@@ -56,8 +58,6 @@ function ClientReview({sortedReviews,setSortedReviews}:sortedReviewProps) {
         />
       ))}
       </div>
-     <div className='grid gap-1 md:gap-2 place-content-center'>
-      <p className='text-[12px] md:text-[14px] font-[600] text-black_101'>29 Aug , 2023</p>
       <p className='smallText text-start text-grey_103'>{review.content}</p>
       <p className='text-[12px] md:text-[14px] font-[400] text-grey_103 '> ~{review.name}</p>
      </div>

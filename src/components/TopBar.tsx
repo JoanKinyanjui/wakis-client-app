@@ -52,7 +52,7 @@ function TopBar() {
   },[pathName])
 
   return (
-    <div className='w-full bg-black_101 py-2.5  lg:py-5 cursor-pointer'>
+    <div className='w-full bg-black_101 dark:bg-purple_01/40 py-2.5  lg:py-5 cursor-pointer'>
       <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] mx-auto'>
    <div className='flex justify-between  '>
     <div 

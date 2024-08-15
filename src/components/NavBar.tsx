@@ -44,7 +44,7 @@ function NavBar() {
      <Drawer open={open} onClose={toggleDrawer(false)}>
    <DrawerComponent />
      </Drawer>
-      <div className='text-purple_02  logoSize' onClick={moveToHome} >WA<span className='text-purple_01'>KI</span></div>
+      <div className='text-purple_02  logoSize dark:text-white_101' onClick={moveToHome} >WA<span className='text-purple_01'>KI</span></div>
      </div>
 
      <div className='flex items-center gap-5 '> 
@@ -73,7 +73,7 @@ function NavBar() {
 
     <div className='hidden md:flex items-center justify-between  cursor-pointer'>
      <div>
-      <div className='text-purple_02  logoSize' onClick={moveToHome}>WA<span className='text-purple_01'>KI</span></div>
+      <div className='text-purple_02  logoSize dark:text-white_101' onClick={moveToHome}>WA<span className='text-purple_01'>KI</span></div>
      </div>
 
      <div className='flex items-center gap-5 '> 

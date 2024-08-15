@@ -29,8 +29,8 @@ export default function RootLayout({
     <CryptoProvider>
     <html lang="en">
    <StoreProvider>
-   <body className={inter.className}>
-       <div className="bg-white_101 sticky top-0 w-full z-[1000]">
+   <body className={`${inter.className} bg-white_101 dark:bg-black_101`}>
+       <div className="bg-white_101 dark:bg-black_101 sticky top-0 w-full z-[1000]">
        <NavBar />
        <TopBar />
        <ToastContainer />

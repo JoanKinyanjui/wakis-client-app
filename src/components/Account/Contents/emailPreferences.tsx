@@ -14,7 +14,7 @@ function EmailPreferences() {
   return (
     <div>
      <div className='w-full mb-3 rounded-md'>
-      <p className='normalText  border-b pb-2 md:pb-3 border-grey_102 w-full !font-[500]'>SUBSCRIBE TO</p>
+      <p className='normalText  border-b pb-2 md:pb-3 border-grey_102 dark:border-grey_104 dark:text-grey_102 w-full !font-[500]'>SUBSCRIBE TO</p>
       <div className='flex gap-1 md:gap-3 items-center normalText text-grey_104'>
         <Radio   
          checked={selectedValue === 'option1'}
@@ -63,7 +63,7 @@ function EmailPreferences() {
      </div>
 
      <div>
-      <Buttons buttonText='Save' className='bg-black_101 text-white_101 md:py-3' />
+      <Buttons buttonText='Save' className='bg-black_101 dark:bg-purple_02 text-white_101 md:py-3' />
      </div>
     </div>
   )

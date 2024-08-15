@@ -17,7 +17,7 @@ function AboutStoreSummary({
   const router = useRouter();
   return (
     <div className={`grid gap-2.5 md:gap-5  ${addTitle ? 'w-full sm:w-[80%] md:w-3/4 lg:w-1/2' :'border-b-[1px] border-grey_102 py-2.5 md:py-5 '}`} >
-     {addTitle ?  <div className='subTitle uppercase'>
+     {addTitle ?  <div className='subTitle uppercase text-black_101 dark:text-grey_102'>
         About Store
       </div> : null}
       {id ? 
@@ -26,7 +26,7 @@ function AboutStoreSummary({
         {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[10px]  shadow-lg'/> : null }
         </div>
         <div className='grid place-content-start gap-2.5 md:gap-4'>
-            <p className='mediumTitle'>{name}</p>
+            <p className='mediumTitle text-black_101  dark:text-grey_102'>{name}</p>
             <div className='text-grey_103 normalText flex gap-2.5 md:gap-5 items-center'>
         <p>{rating} Rating</p>
         <p>{parseFloat(followers)/1000}K Followers</p>
@@ -40,7 +40,7 @@ function AboutStoreSummary({
        {logo ? <Image src={logo}  alt='svg' width={70} height={70} className='shrink-0 w-full h-full border  rounded-[10px]  shadow-lg'/> : null }
        </div>
        <div className='grid place-content-start gap-2.5 md:gap-4'>
-           <p className='mediumTitle'>{name}</p>
+           <p className='mediumTitle  text-black_101  dark:text-grey_102'>{name}</p>
            <div className='text-grey_103 normalText flex gap-2.5 md:gap-5 items-center'>
        <p>{rating} Rating</p>
        <p>{parseFloat(followers)/1000}K Followers</p>

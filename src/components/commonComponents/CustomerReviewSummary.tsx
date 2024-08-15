@@ -12,13 +12,13 @@ function CustomerReviewSummary({item}:ItemProps) {
   return (
     <div className='grid gap-2.5 md:gap-5'>
 
-      <div className='subTitle'>Customer Reviews</div>
+      <div className='subTitle text-black_101 dark:text-grey_102 uppercase'>Customer Reviews</div>
 
-      <div className='bg-grey_101 rounded-[10px] w-full  px-2.5 py-2.5 md:px-5 md:py-5 grid lg:flex gap-2  md:gap-[50px] md:items-center'>
+      <div className='bg-grey_101 dark:bg-purple_02 rounded-[10px] w-full  px-2.5 py-2.5 md:px-5 md:py-5 grid lg:flex gap-2  md:gap-[50px] md:items-center'>
           <div>
-            <p className='normalXText text-black_101 mb-1 md:mb-2.5'>Average Rating</p>
+            <p className='normalXText text-black_101 dark:text-white_101/60 mb-1 md:mb-2.5'>Average Rating</p>
            <div className='flex gap-5 md:gap-2 items-center'>
-           <p className='text-[15px] md:text-[18px] font-[700] text-black_101'>4.5</p>
+           <p className='text-[15px] md:text-[18px] font-[700] text-black_101 dark:text-white_101/60'>4.5</p>
           
            <div className='flex gap-1 md:gap-2 items-center'>
            { [...Array(5)].map((_, index) => (
@@ -36,31 +36,31 @@ function CustomerReviewSummary({item}:ItemProps) {
           </div>
 
           <div>
-          <p className='normalXText text-black_101 mb-1 md:mb-2.5'>Did Item Fit Well ?</p>
+          <p className='normalXText text-black_101 dark:text-white_101/60 mb-1 md:mb-2.5'>Did Item Fit Well ?</p>
             <div className='grid md:gap-22'>
 
               <div className='flex items-center'>
                 <div className='w-[70px] md:w-[150px] '>
-                  <p className='smallText'>Small</p>
+                  <p className='smallText text-black_101 dark:text-white_101/60'>Small</p>
                 </div>
                 <div className='h-1 md:h-2 bg-grey_102 rounded-full w-[200px] md:w-[300px] overflow-hidden'>
-                   <div className={`w-[30%] rounded-full h-1 md:h-2 bg-[black]  `}></div>
+                   <div className={`w-[30%] rounded-full h-1 md:h-2 bg-[black] dark:bg-purple_01`}></div>
                   </div>
               </div>
               <div className='flex items-center'>
                 <div className='w-[70px] md:w-[150px] '>
-                  <p className='smallText'>True Size</p>
+                  <p className='smallText text-black_101 dark:text-white_101/60'>True Size</p>
                 </div>
                 <div className='h-1 md:h-2 bg-grey_102 rounded-full w-[200px] md:w-[300px] overflow-hidden'>
-                   <div className={`w-[80%] rounded-full h-1 md:h-2 bg-[black]  `}></div>
+                   <div className={`w-[80%] rounded-full h-1 md:h-2 bg-[black] dark:bg-purple_01`}></div>
                   </div>
               </div>
               <div className='flex items-center'>
                 <div className='w-[70px] md:w-[150px] '>
-                  <p className='smallText'>Large</p>
+                  <p className='smallText text-black_101 dark:text-white_101/60'>Large</p>
                 </div>
                 <div className='h-1 md:h-2 bg-grey_102 rounded-full w-[200px] md:w-[300px] overflow-hidden'>
-                   <div className={`w-[10%] rounded-full h-1 md:h-2 bg-[black]  `}></div>
+                   <div className={`w-[10%] rounded-full h-1 md:h-2 bg-[black] dark:bg-purple_01`}></div>
                   </div>
               </div>
 

@@ -104,8 +104,8 @@ const handleAddToCart = (item:ProductsProps)=>{
     <div className='grid gap-2.5 md:gap-5 w-full place-content-start lg:place-content-center '>
       {/* Product Desc */}
      <div>
-     <p className='mediumTitle text-start '>{item.title}</p>
-     <p className='normalText text-start text-grey_104'>{item.desscription}</p>
+     <p className='mediumTitle text-start text-black_101 dark:text-white_101 '>{item.title}</p>
+     <p className='normalText text-start text-grey_104 dark:text-grey_103'>{item.desscription}</p>
      </div>
       {/* Tags */}
       <div className='flex flex-wrap gap-1.5 md:gap-3 h-[max-content]'>
@@ -136,20 +136,20 @@ const handleAddToCart = (item:ProductsProps)=>{
       {/* Variations Available */}
       <div className='flex gap-2.5 md:gap-5'>
        {sizeOptions.map((size,index)=>(
-         <p key={index} onClick={()=>onSelectingSize(size.name)}  className={`smallText uppercase w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] text-center items-center flex justify-center border shadow-md rounded-[2px] ${selectedSize?.size === size.name ? 'text-white_101 bg-black_101' : 'text-grey_104 border-grey_102'}`}>{size.name}</p>
+         <p key={index} onClick={()=>onSelectingSize(size.name)}  className={`smallText uppercase w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px] text-center items-center flex justify-center border shadow-md rounded-[2px] ${selectedSize?.size === size.name ? 'text-white_101 bg-black_101 dark:bg-white_101 dark:text-black_101' : 'text-grey_104 dark:text-grey_102 border-grey_102 dark:border-grey_104'}`}>{size.name}</p>
        ))}
       </div>
       {/* sizes specification */}
      {selectedSize &&  
      <div className='flex  gap-2.5 md:gap-5 rounded-md'>
           <div>
-            <div className='smallText flex gap-2 text-grey_104'>Bust : <p className='text-black_101'>{selectedSize.bust}</p></div>
+            <div className='smallText flex gap-2 text-grey_104 dark:text-grey_103 '>Bust : <p className='text-black_101 dark:text-grey_102'>{selectedSize.bust}</p></div>
           </div>
           <div>
-            <div className='smallText flex gap-2 text-grey_104'>Waist : <p className='text-black_101'>{selectedSize.waist}</p></div>
+            <div className='smallText flex gap-2 text-grey_104 dark:text-grey_103'>Waist : <p className='text-black_101 dark:text-grey_102'>{selectedSize.waist}</p></div>
           </div>
           <div>
-            <div className='smallText flex gap-2 text-grey_104'>Hips : <p className='text-black_101'>{selectedSize.hips}</p></div>
+            <div className='smallText flex gap-2 text-grey_104 dark:text-grey_103'>Hips : <p className='text-black_101 dark:text-grey_102'>{selectedSize.hips}</p></div>
           </div>
       </div>}
       {/* color specs */}
@@ -164,7 +164,7 @@ const handleAddToCart = (item:ProductsProps)=>{
       <div className='grid gap-[2px] md:gap-1 mt-2'>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='normalXText !font-[600]'>Ksh 428</p>
+        <p className='normalXText !font-[600] text-black_101 dark:text-white_101'>Ksh 428</p>
         <p className='smallText text-grey_104'>(Min. order 1 piece)</p>
        </div>
        <div>
@@ -173,7 +173,7 @@ const handleAddToCart = (item:ProductsProps)=>{
    </div>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='normalXText !font-[600]'>Ksh 328</p>
+        <p className='normalXText !font-[600] text-black_101 dark:text-white_101'>Ksh 328</p>
         <p className='smallText text-grey_104'>(5 - 19 pieces)</p>
        </div>
        <div>
@@ -182,7 +182,7 @@ const handleAddToCart = (item:ProductsProps)=>{
    </div>
    <div className='w-full flex justify-between items-center'>
        <div className='flex gap-2 md:gap-4 items-center'>
-        <p className='normalXText !font-[600]'>Ksh 128</p>
+        <p className='normalXText !font-[600] text-black_101 dark:text-white_101'>Ksh 128</p>
         <p className='smallText text-grey_104'>(&gt;= 20 pieces)</p>
        </div>
        <div>
@@ -193,9 +193,9 @@ const handleAddToCart = (item:ProductsProps)=>{
 
       {/* Add To Cart Button */}
       <div className='flex gap-5'>
-<Buttons buttonText='ADD TO CART' className='bg-black_101 text-white_101 w-full py-2' onClick={()=>handleAddToCart(item)}/>
-<Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' onClick={toggleFavourite}/>
-<Icon icon='ooui:share'  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px]' />
+<Buttons buttonText='ADD TO CART' className='bg-black_101 dark:bg-purple_02 text-white_101 w-full py-2' onClick={()=>handleAddToCart(item)}/>
+<Icon icon={favourite ? 'mdi:favourite' :'mdi:favourite-border'}  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px] dark:text-grey_102' onClick={toggleFavourite}/>
+<Icon icon='ooui:share'  className='w-[30px] md:w-[48px] h-[30px] md:h-[48px] text-grey_102' />
       </div>
     </div>
     }
