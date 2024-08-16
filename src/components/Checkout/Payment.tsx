@@ -33,7 +33,7 @@ function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProp
        }} 
        />
        <div className='grid'>
-        <p className='!font-[500] text-black_101'>MPESA</p>
+        <p className='!font-[500] text-black_101 dark:text-grey_102'>MPESA</p>
     <div className='flex gap-2.5 md:gap-5 items-center'>
     <p>Phone No:</p>
     <p>XXXXX-6990</p>
@@ -55,7 +55,7 @@ function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProp
        }} 
        />
        <div className='grid'>
-        <p className='!font-[500] text-black_101'>Bank Cards</p>
+        <p className='!font-[500] text-black_101  dark:text-grey_102'>Bank Cards</p>
        <div className='flex gap-2.5 md:gap-5 items-center' >
        <p>Card Number</p>
        <p>XXXX-5648</p>
@@ -77,7 +77,7 @@ function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProp
        }} 
        />
      <div className='grid'>
-        <p className='!font-[500] text-black_101'>CRYPTO (swypt.io)</p>
+        <p className='!font-[500] text-black_101  dark:text-grey_102'>CRYPTO (swypt.io)</p>
     <div className='flex gap-2.5 md:gap-5 items-center'>
     <p>Till No:</p>
     <p>749 865</p>

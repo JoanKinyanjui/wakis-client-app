@@ -28,7 +28,7 @@ function DeliveryDetails() {
          }} 
          />
          <div className='grid'>
-          <p className='!font-[500] text-black_101'>Pick-up Station</p>
+          <p className='!font-[500] text-black_101 dark:text-grey_102'>Pick-up Station</p>
           <p>Shop42 ,2nd Floor, Jewel Complex</p>
           <p> Kasarani.</p>
          </div>
@@ -48,7 +48,7 @@ function DeliveryDetails() {
          }} 
          />
          <div className='grid'>
-          <p className='!font-[500] text-black_101'>Door Delivery</p>
+          <p className='!font-[500] text-black_101 dark:text-grey_102'>Door Delivery</p>
           <p>Delivery Scheduled for 23rd July</p>
           <p> 9:00 a.m  to 6:00p.m</p>
          </div>

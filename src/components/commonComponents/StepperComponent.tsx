@@ -154,7 +154,7 @@ export default function StepperComponent() {
         <Buttons
         buttonText={activeStep === steps.length - 1 ? 'Confirm' : 'Next'}
         onClick={handleNext}
-        className='bg-black_101 text-white_101 px-5 md:px-8 w-full'
+        className='bg-black_101 dark:bg-purple_02 text-white_101 px-5 md:px-8 w-full'
         />         
       </div>
      <div className='z-[1000]'>
