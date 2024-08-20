@@ -18,6 +18,8 @@ import "swypt-checkout/dist/styles.css";
 import ModalComponent from './ModalComponent';
 import MpesaPaymentModal from '../Checkout/MpesaPaymentModal';
 import BankPayment from '../Checkout/BankPayment';
+import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/lib/hooks';
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
@@ -96,15 +98,14 @@ export default function StepperComponent() {
   const [open,setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const total = useAppSelector((state)=>state.cart.total);
 
   const handleNext = () => {
    if(activeStep === 2){
     if(selectedPaymentValue === "option1"){
-       handleOpen();
-    }else if(selectedPaymentValue === "option2"){
-       handleOpen();
-    }else {
       openSwyptCheckout();
+    }else {
+       handleOpen();
     }
     
    }else{
@@ -165,15 +166,21 @@ export default function StepperComponent() {
       businessName="Waki"
       merchantName="Waki"
       merchantAddress="0x6d19a24D93379D1bA58d28884fFBBEf1bc145387" 
+      amount={total}
     />
      </div>
      <div>
       <ModalComponent   open={open} handleClose={handleClose}>
 <div>
-  {selectedPaymentValue && selectedPaymentValue === "option1" ? 
+  {/* {selectedPaymentValue && selectedPaymentValue === "option1" ? 
   <MpesaPaymentModal />
 :
   <BankPayment />
+} */}
+ {selectedPaymentValue && selectedPaymentValue === "option2" ? 
+  <BankPayment />
+:
+null
 }
 </div>
       </ModalComponent>

@@ -63,7 +63,7 @@ function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProp
        </div>
       </div>
 
-      <div className='flex gap-2.5 md:gap-5'>
+      {/* <div className='flex gap-2.5 md:gap-5'>
       <Radio
       checked={selectedPaymentValue === 'option3'}
       onChange={handleRadioChange}
@@ -83,7 +83,7 @@ function Payment({selectedPaymentValue,setSelectedPaymentValue}:paymentValueProp
     <p>749 865</p>
     </div>
        </div>
-      </div>
+      </div> */}
 
 
     </div>  

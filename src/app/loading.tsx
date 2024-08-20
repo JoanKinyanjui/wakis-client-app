@@ -1,6 +1,9 @@
+"use client"
+import useTheme from '@/hooks/useTheme';
 import React from 'react'
 
 function Loading() {
+  const {isDarkMode} = useTheme();
   return (
     <div className='w-full flex justify-center min-h-[50vh] items-center'>
     <div className="loader">
@@ -10,7 +13,7 @@ function Loading() {
       x="50%"
       y="60%"
       text-anchor="middle"
-      fill="black"
+      fill={isDarkMode ? '860ECF' :'black'}
       font-size="24"
       font-weight="bold"
     >
@@ -26,7 +29,7 @@ function Loading() {
       x="50%"
       y="60%"
       text-anchor="middle"
-      fill="black"
+      fill={isDarkMode ? '860ECF' :'black'}
       font-size="24"
       font-weight="bold"
     >
@@ -42,7 +45,7 @@ function Loading() {
       x="50%"
       y="60%"
       text-anchor="middle"
-      fill="black"
+      fill={isDarkMode ? '860ECF' :'black'}
       font-size="24"
       font-weight="bold"
     >
@@ -58,7 +61,7 @@ function Loading() {
       x="50%"
       y="60%"
       text-anchor="middle"
-      fill="black"
+      fill={isDarkMode ? '860ECF' :'black'}
       font-size="24"
       font-weight="bold"
     >
