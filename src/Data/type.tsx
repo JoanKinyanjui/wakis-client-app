@@ -33,6 +33,21 @@ type sizeOptions ={
     name:string,
     value:string,
 }
+type Category = 
+  | 'Men'
+  | 'Women'
+  | 'Kids'
+  | 'Accessories'
+  | 'Footwear'
+  | 'Bags'
+  | 'Jewelry'
+  | 'Outerwear'
+  | 'Sportswear'
+  | 'Underwear'
+  | 'Ankara'
+  | 'Home'
+  | 'Shoes';
+
 export type ProductsProps = {
     id:string;
     title?:string;
@@ -42,7 +57,7 @@ export type ProductsProps = {
     itemsSold?:number;
     desscription:string,
     imageUrl:string;
-    category?:string[],
+    category?:Category[],
     gallery:productGallery[];
     quantity:number;
     storeName:string;
