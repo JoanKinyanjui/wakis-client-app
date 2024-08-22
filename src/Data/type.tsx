@@ -46,7 +46,10 @@ type Category =
   | 'Underwear'
   | 'Ankara'
   | 'Home'
-  | 'Shoes';
+  | 'Shoes'
+  | 'BabyandMaternity'
+  | 'SportsandOutDoors'
+  | 'UnderwearandSleepWear';
 
 export type ProductsProps = {
     id:string;

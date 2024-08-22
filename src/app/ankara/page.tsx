@@ -1,16 +1,29 @@
+"use client"
 import { Products } from '@/Data/Products'
+import { ProductsProps } from '@/Data/type'
 import CardWrapper from '@/components/commonComponents/CardWrapper'
 import CategoryHeader from '@/components/commonComponents/CategoryHeader'
 import ProductImage from '@/components/commonComponents/ProductImage'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function page() {
+  const [ankaraProducts,setAnkaraProducts] = useState<ProductsProps[]>([]);
+  useEffect(()=>{
+    const checkAnkaraCategory =(item:any)=>{
+     if(item.category.includes('Ankara')){
+      return item
+     }
+    }
+    const results = Products.filter(checkAnkaraCategory);
+    setAnkaraProducts(results);
+  },[])
+
   return (
     <div>
       <CardWrapper customClass='mt-2.5 md:mt-5'>
-      <CategoryHeader headingLeft='Shoes'   />
+      <CategoryHeader headingLeft='Ankara'   />
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-3'>
-   {Products.map((item,index)=>(
+   {ankaraProducts && ankaraProducts.map((item,index)=>(
       <ProductImage 
       item={item}
       key={item.id}
