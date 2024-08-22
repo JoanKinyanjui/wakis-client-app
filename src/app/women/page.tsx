@@ -1,10 +1,15 @@
+"use client"
 import { Products } from '@/Data/Products'
 import CardWrapper from '@/components/commonComponents/CardWrapper'
 import CategoryHeader from '@/components/commonComponents/CategoryHeader'
 import ProductImage from '@/components/commonComponents/ProductImage'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function page() {
+  const [womenProducts,setWomenProducts] = useState();
+ useEffect(()=>{
+  
+ })
   return (
     <div>
       <CardWrapper customClass='mt-2.5 md:mt-5'>

@@ -480,7 +480,7 @@ export const Products :ProductsProps[] = [
         color:'',
         size:'',
         quantity:0,
-        category:[],
+        category:['Women'],
         storeName:"Bellani",
     },
     {
