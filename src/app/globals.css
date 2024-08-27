@@ -10,6 +10,11 @@
   width: 16px;
   height: 16px;
 }
+.dark-icon{
+  color: #9A9A9B;
+  width: 16px;
+  height: 16px;
+}
 
 .logoSize{
   font-weight:700;

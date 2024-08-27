@@ -84,13 +84,13 @@ function NavBar() {
       <Image  src='/assets/icons/search.png' alt='' width={18} height={18}/>
         <input type='text' placeholder='Search' className='bg-grey_101 focus:outline-none focus:border-none'/>
       </div>
-      <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveToAccount}>
+      <div className='py-3 px-3 bg-grey_101  rounded-full flex items-center justify-center' onClick={moveToAccount}>
       <Icon icon='mdi:account' className='icon'  />
       </div>
-     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center' onClick={moveWishList}>
+     <div className='py-3 px-3 bg-grey_101  rounded-full flex items-center justify-center' onClick={moveWishList}>
      <Icon icon='mdi:favourite' className='icon' />
       </div>
-     <div className='py-3 px-3 bg-grey_101 rounded-full flex items-center justify-center relative' onClick={moveToCart}>
+     <div className='py-3 px-3 bg-grey_101  rounded-full flex items-center justify-center relative' onClick={moveToCart}>
      <Icon icon='mdi:cart' className='icon'  />
      {
        quantity === 0 
@@ -100,11 +100,11 @@ function NavBar() {
         }
         </div>
        {isDarkMode ? 
-        <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center shrink-0' onClick={toggleTheme}>
+        <div className='py-2 px-2 bg-grey_101  rounded-full flex items-center justify-center shrink-0' onClick={toggleTheme}>
         <Icon icon='ic:round-light-mode' className='icon'  />
       </div>
       :
-      <div className='py-2 px-2 bg-grey_101 rounded-full flex items-center justify-center shrink-0' onClick={toggleTheme}>
+      <div className='py-2 px-2 bg-grey_101  rounded-full flex items-center justify-center shrink-0' onClick={toggleTheme}>
       <Icon icon='material-symbols:dark-mode' className='icon'  />
     </div>
     }
